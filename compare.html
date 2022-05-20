@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compare</title>
+</head>
+<body>
+<div style="align-content: center">
+    <table id="feedback_table">
+        <tr id="gold">
+        </tr>
+        <tr id="feedback">
+        </tr>
+    </table>
+    <br>
+    <span>test file name</span>
+    <input type="text" id="filename">
+    <br>
+    <span>gold file name</span>
+    <input type="text" id="gold_filename">
+    <button type="button" onclick="">Compare</button>
+</div>
+</body>
+</html>
+
+<script src="compare.js"></script>
+
+<script>
+    function get_logit_chars(logits, alphabet) {
+        let logit_chars = []
+        for (let i = 0; i < logits.length; i ++) {
+            let max_logit = 0.0;
+            let max_index = 0;
+            for (let j = 0; j < logits[i].length; j++) {
+                if (logits[i][j] > max_logit) {
+                    max_logit = logits[i][j];
+                    max_index = j;
+                }
+            }
+            logit_chars[i] = alphabet[max_index]
+        }
+        return logit_chars
+    }
+
+    function run_compare() {
+        // initialize variables
+        let filename = document.getElementById("filename").value;
+        let gold_filename = document.getElementById("gold_filename").value;
+        let gold_row = document.getElementById("gold");
+        let feedback_row = document.getElementById("feedback");
+        let gold = [];
+        let test = [];
+
+        // reset table
+        gold_row.innerHTML = "";
+        feedback_row.innerHTML = "";
+
+        // load data from json files
+        fetch(filename)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                const test = JSON.parse(data);
+            });
+        fetch(gold_filename)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                const gold = JSON.parse(data);
+            });
+
+        // retrieve gold text from json
+        let gold_phrase = "";
+        for (let i = 0; i < gold.words.length; i++) {
+            gold_phrase += gold.words[i].word + (i === gold.words.length - 1 ? '' : ' ')
+        }
+        console.log(gold_phrase)
+
+        // set cells to gold text
+        for (let i = 0; i < gold_phrase.length; i++) {
+            let new_cell = gold_row.insertCell(i);
+            new_cell.innerText = gold[i];
+        }
+
+        // get logit characters
+        let gold_logit_chars = get_logit_chars(gold.logits, gold.alphabet)
+        let test_logit_chars = get_logit_chars(test.logits, test.alphabet)
+
+        // retrieve alignments
+        let gold_align = needleman_wunsch_align(gold_phrase, gold_logit_chars)
+        let test_align = needleman_wunsch_align(gold_phrase, test_logit_chars)
+
+
+    }
+</script>
