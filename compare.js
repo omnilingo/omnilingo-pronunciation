@@ -79,15 +79,15 @@ function needleman_wunsch_align(x, y, scorer = default_scorer) {
         let direction = grid[tracer[0]][tracer[1]][1]
         if(direction === directions["diagonal"]) {
             tracer.map((x) => x - 1)
-            alignment.push(tracer.slice())
+            alignment.unshift(tracer.slice())
         }
         else if(direction === directions["up"]) {
             tracer[0] = tracer[0] - 1
-            alignment.push([tracer[0], null])
+            alignment.unshift(tracer.slice())
         }
         else { // direction is left
             tracer[1] = tracer[1] - 1
-            alignment.push([null, tracer[1]])
+            alignment.unshift(tracer.slice())
         }
     }
     console.log(alignment)
