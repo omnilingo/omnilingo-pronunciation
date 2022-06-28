@@ -27,7 +27,7 @@
 
 <script>
     function get_logit_chars(logits, alphabet) {
-        let logit_chars = []
+        let logit_chars = [];
         for (let i = 0; i < logits.length; i ++) {
             let max_logit = 0.0;
             let max_index = 0;
@@ -37,61 +37,91 @@
                     max_index = j;
                 }
             }
-            logit_chars[i] = alphabet[max_index]
+            logit_chars[i] = alphabet[max_index];
         }
-        return logit_chars
+        return logit_chars;
     }
 
-    function run_compare() {
+    async function run_compare() {
         // initialize variables
         let filename = document.getElementById("filename").value;
         let gold_filename = document.getElementById("gold_filename").value;
         let gold_row = document.getElementById("gold");
         let feedback_row = document.getElementById("feedback");
-        let gold = [];
-        let test = [];
 
         // reset table
         gold_row.innerHTML = "";
         feedback_row.innerHTML = "";
 
         // load data from json files
-        fetch(filename)
+        const test = await fetch(filename)
             .then(function (response) {
                 return response.json();
-            })
-            .then(function (data) {
-                const test = JSON.parse(data);
             });
-        fetch(gold_filename)
+        // console.log(test)
+        const gold = await fetch(gold_filename)
             .then(function (response) {
                 return response.json();
-            })
-            .then(function (data) {
-                const gold = JSON.parse(data);
             });
 
         // retrieve gold text from json
         let gold_phrase = "";
         for (let i = 0; i < gold.words.length; i++) {
-            gold_phrase += gold.words[i].word + (i === gold.words.length - 1 ? '' : ' ')
+            gold_phrase += gold.words[i].word + (i === gold.words.length - 1 ? '' : ' ');
         }
-        console.log(gold_phrase)
+        console.log(gold_phrase);
 
         // set cells to gold text
         for (let i = 0; i < gold_phrase.length; i++) {
             let new_cell = gold_row.insertCell(i);
-            new_cell.innerText = gold[i];
+            new_cell.innerText = gold_phrase[i];
         }
 
         // get logit characters
-        let gold_logit_chars = get_logit_chars(gold.logits, gold.alphabet)
-        let test_logit_chars = get_logit_chars(test.logits, test.alphabet)
+        let gold_logit_chars = get_logit_chars(gold.logits, gold.alphabet);
+        let test_logit_chars = get_logit_chars(test.logits, test.alphabet);
 
         // retrieve alignments
-        let gold_align = needleman_wunsch_align(gold_phrase, gold_logit_chars)
-        let test_align = needleman_wunsch_align(gold_phrase, test_logit_chars)
+        let gold_align = needleman_wunsch_align(gold_phrase, gold_logit_chars);
+        let test_align = needleman_wunsch_align(gold_phrase, test_logit_chars);
 
+        let best_golds = [];
+        let best_tests = [];
+
+        let c = 0;
+        let a = [0.0];
+        for (let i = 0; i < gold_align.length; i++) {
+            if (gold_align[i][0] !== c) { // save best gold and increment c
+                best_golds[c] = a;
+                a = [0.0];
+                c++;
+            }
+            if (Math.max(...gold.logits[gold_align[i][1]]) > Math.max(...a)) {
+                a = gold.logits[gold_align[i][1]];
+            }
+        }
+        best_golds[c] = a;
+        console.log(best_golds);
+
+        c = 0;
+        a = [0.0];
+        for (let i = 0; i < test_align.length; i++) {
+            if (test_align[i][0] !== c) { // save best gold and increment c
+                best_tests[c] = a;
+                a = [0.0];
+                c++;
+            }
+            if (Math.max(...test.logits[test_align[i][1]]) > Math.max(...a)) {
+                a = test.logits[test_align[i][1]];
+            }
+        }
+        best_tests[c] = a;
+
+        for (let i = 0; i < best_golds.length; i++) {
+            let new_cell = feedback_row.insertCell(i);
+            // new_cell.innerText = cosinesim(best_golds[i], best_tests[i]);
+            new_cell.innerText = Math.max(...best_golds[i]).toFixed(2);
+        }
 
     }
 </script>
