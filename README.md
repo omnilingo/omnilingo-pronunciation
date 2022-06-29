@@ -17,4 +17,15 @@ Input two filenames (they are URLs), e.g.
 
 Then click on `Compare`.
 
+## Examples
 
+
+Output test 1:
+[](img/output-test1.png)
+Output test 2:
+[](img/output-test2.png)
+Output test 3:
+[](img/output-test3.png)
+
+Outputs spectrogram:
+[](img/output.png)
