@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Compare</title>
+<style>
+td   {text-align: center;}
+</style>
 </head>
 <body>
 <div style="align-content: center">
@@ -120,7 +123,10 @@
         for (let i = 0; i < best_golds.length; i++) {
             let new_cell = feedback_row.insertCell(i);
             // new_cell.innerText = cosinesim(best_golds[i], best_tests[i]);
-            new_cell.innerText = Math.max(...best_golds[i]).toFixed(2);
+            let colour = 'rgb(0,' + (Math.max(...best_golds[i]) * 200) + ',0)';
+            let text = Math.max(...best_golds[i]).toFixed(2);
+            new_cell.innerHTML = '<span style="color:' + colour + '">' + text + '</span>';
+//            new_cell.innerText = Math.max(...best_golds[i]).toFixed(2);
         }
 
     }
