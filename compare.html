@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Compare</title>
-<style>
-td   {text-align: center;}
-</style>
+    <style>
+        table, th, td {
+            border:1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            margin-left:auto;
+            margin-right:auto;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-<div style="align-content: center">
+<div style="text-align: center">
+    <br><br>
     <table id="feedback_table">
-        <tr id="gold">
+        <colgroup id="table_colgroup">
+            <col>
+        </colgroup>
+        <tr id="text">
         </tr>
-        <tr id="feedback">
+        <tr id="gold_scores">
+        </tr>
+        <tr id="test_scores">
+        </tr>
+        <tr id="cosine">
         </tr>
     </table>
     <br>
-    <span>test file name</span>
-    <input type="text" id="filename">
-    <br>
     <span>gold file name</span>
-    <input type="text" id="gold_filename">
+    <input type="text" id="gold_filename" value="data/gold.json"><br>
+    <span>test file name</span>
+    <input type="text" id="filename" value="data/test-1.json">
+    <br>
     <button type="button" onclick="run_compare()">Compare</button>
 </div>
 </body>
@@ -49,34 +64,45 @@ td   {text-align: center;}
         // initialize variables
         let filename = document.getElementById("filename").value;
         let gold_filename = document.getElementById("gold_filename").value;
-        let gold_row = document.getElementById("gold");
-        let feedback_row = document.getElementById("feedback");
+        let feedback_table = document.getElementById("feedback_table");
+        let colgroup = document.getElementById("table_colgroup");
+        let text_row = document.getElementById("text");
+        let gold_row = document.getElementById("gold_scores");
+        let test_row = document.getElementById("test_scores");
+        let cosine_row = document.getElementById("cosine");
 
         // reset table
-        gold_row.innerHTML = "";
-        feedback_row.innerHTML = "";
+        colgroup.innerHTML = "<col>";
+        text_row.innerHTML = "<td>Sentence: </td>";
+        gold_row.innerHTML = "<td>Gold Scores: </td>";
+        test_row.innerHTML = "<td>Test Scores: </td>";
+        cosine_row.innerHTML = "<td>Cosine Scores:</td>";
 
         // load data from json files
         const test = await fetch(filename)
             .then(function (response) {
                 return response.json();
             });
-        // console.log(test)
         const gold = await fetch(gold_filename)
             .then(function (response) {
                 return response.json();
             });
 
-        // retrieve gold text from json
+        // retrieve gold text from gold json
         let gold_phrase = "";
         for (let i = 0; i < gold.words.length; i++) {
             gold_phrase += gold.words[i].word + (i === gold.words.length - 1 ? '' : ' ');
         }
-        console.log(gold_phrase);
+
+        // map alphabet characters to their index
+        let alphabet_index = new Map();
+        for (let i = 0; i < gold.alphabet.length; i++) {
+            alphabet_index.set(gold.alphabet[i], i);
+        }
 
         // set cells to gold text
         for (let i = 0; i < gold_phrase.length; i++) {
-            let new_cell = gold_row.insertCell(i);
+            let new_cell = text_row.insertCell();
             new_cell.innerText = gold_phrase[i];
         }
 
@@ -87,47 +113,89 @@ td   {text-align: center;}
         // retrieve alignments
         let gold_align = needleman_wunsch_align(gold_phrase, gold_logit_chars);
         let test_align = needleman_wunsch_align(gold_phrase, test_logit_chars);
+        // console.log(gold_align);
+        // console.log(test_align);
 
         let best_golds = [];
         let best_tests = [];
 
+        // get highest score for each character in gold
         let c = 0;
-        let a = [0.0];
+        let c_index = alphabet_index.get(gold_phrase[0]);
+        // have to create array of length for comparitor using a[c_index]
+        let a = new Array(gold.logits[0].length).fill(0.0);
         for (let i = 0; i < gold_align.length; i++) {
             if (gold_align[i][0] !== c) { // save best gold and increment c
                 best_golds[c] = a;
-                a = [0.0];
+                a = new Array(gold.logits[0].length).fill(0.0);
                 c++;
+                c_index = alphabet_index.get(gold_phrase[c]);
             }
-            if (Math.max(...gold.logits[gold_align[i][1]]) > Math.max(...a)) {
+            console.log(c + ': ' + c_index);
+            console.log(gold.logits[gold_align[i][1]]);
+            if (gold.logits[gold_align[i][1]][c_index] > a[c_index]) {
                 a = gold.logits[gold_align[i][1]];
             }
+            // if (Math.max(...gold.logits[gold_align[i][1]]) > Math.max(...a)) {
+            //     a = gold.logits[gold_align[i][1]];
+            // }
         }
         best_golds[c] = a;
-        console.log(best_golds);
 
+        // get highest score for each character in test
         c = 0;
-        a = [0.0];
+        c_index = alphabet_index.get(gold_phrase[0]);
+        a = new Array(gold.logits[0].length).fill(0.0);
         for (let i = 0; i < test_align.length; i++) {
-            if (test_align[i][0] !== c) { // save best gold and increment c
+            if (test_align[i][0] !== c) { // save best test and increment c
                 best_tests[c] = a;
-                a = [0.0];
+                a = new Array(gold.logits[0].length).fill(0.0);
                 c++;
+                c_index = alphabet_index.get(gold_phrase[c]);
             }
-            if (Math.max(...test.logits[test_align[i][1]]) > Math.max(...a)) {
+            console.log(c + ': ' + c_index);
+            console.log(test.logits[test_align[i][1]]);
+            if (test.logits[test_align[i][1]][c_index] > a[c_index]) {
                 a = test.logits[test_align[i][1]];
             }
+            // if (Math.max(...test.logits[test_align[i][1]]) > Math.max(...a)) {
+            //     a = test.logits[test_align[i][1]];
+            // }
         }
         best_tests[c] = a;
 
+        // insert the gold characters into the table
         for (let i = 0; i < best_golds.length; i++) {
-            let new_cell = feedback_row.insertCell(i);
-            // new_cell.innerText = cosinesim(best_golds[i], best_tests[i]);
-            let colour = 'rgb(0,' + (Math.max(...best_golds[i]) * 200) + ',0)';
-            let text = Math.max(...best_golds[i]).toFixed(2);
-            new_cell.innerHTML = '<span style="color:' + colour + '">' + text + '</span>';
-//            new_cell.innerText = Math.max(...best_golds[i]).toFixed(2);
+            let new_cell = gold_row.insertCell();
+            let new_col = document.createElement("col");
+            new_col.style.backgroundColor = "rgba(255, 0, 0, " + (1 - best_golds[i][alphabet_index.get(gold_phrase[i])]) + ")"
+            colgroup.append(new_col);
+            // new_cell.innerText = cosinesim(best_golds[i], best_tests[i]).toFixed(3);
+            new_cell.innerText = best_golds[i][alphabet_index.get(gold_phrase[i])].toFixed(3);
         }
+
+        // insert the raw max test scores into the table
+        for (let i = 0; i < best_tests.length; i++) {
+            let new_cell = test_row.insertCell();
+            new_cell.innerText = best_tests[i][alphabet_index.get(gold_phrase[i])].toFixed(3);
+        }
+
+        for (let i = 0; i < best_golds.length; i++) {
+            let new_cell = cosine_row.insertCell();
+            // console.log("best gold at " + i + ": " + best_golds[i]);
+            // console.log("best test at " + i + ": " + best_tests[i]);
+            new_cell.innerText = cosinesim(best_golds[i], best_tests[i]).toFixed(3);
+            // new_cell.innerText = Math.max(...best_golds[i]).toFixed(3);
+        }
+
+//         for (let i = 0; i < best_golds.length; i++) {
+//             let new_cell = feedback_row.insertCell(i);
+//             // new_cell.innerText = cosinesim(best_golds[i], best_tests[i]);
+//             let colour = 'rgb(0,' + (Math.max(...best_golds[i]) * 200) + ',0)';
+//                let text = Math.max(...best_golds[i]).toFixed(2);
+//                new_cell.innerHTML = '<span style="color:' + colour + '">' + text + '</span>';
+//                new_cell.innerText = Math.max(...best_golds[i]).toFixed(2);
+//         }
 
     }
 </script>
