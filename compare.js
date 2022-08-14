@@ -56,7 +56,9 @@ function needleman_wunsch_align(x, y, scorer = default_scorer) {
     // fill in the grid
     for(let i = 1; i < x.length + 1; i++) {
         for(let j = 1; j < y.length + 1; j++) {
-            let z = grid[i-1][j-1][0] + scorer(x[i], y[j]);
+            // console.log(j);
+            // console.log(y[j]);
+            let z = grid[i-1][j-1][0] + scorer(x[i-1], y[j-1]);
             let item = [z, directions["diagonal"]];
             if(grid[i-1][j][0] - 1 > item[0]) { // up
                 item = [grid[i-1][j][0] - 1, directions["up"]];
