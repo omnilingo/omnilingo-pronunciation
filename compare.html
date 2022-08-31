@@ -29,6 +29,8 @@
         </tr>
         <tr id="cosine">
         </tr>
+        <tr id="js_row">
+        </tr>
     </table>
     <br>
     <span>gold file name</span>
@@ -41,6 +43,7 @@
 </body>
 </html>
 
+<script src="math.js"></script>
 <script src="compare.js"></script>
 
 <script>
@@ -70,6 +73,7 @@
         let gold_row = document.getElementById("gold_scores");
         let test_row = document.getElementById("test_scores");
         let cosine_row = document.getElementById("cosine");
+        let js_row = document.getElementById("js_row");
 
         // reset table
         colgroup.innerHTML = "<col>";
@@ -77,6 +81,7 @@
         gold_row.innerHTML = "<td>Gold Scores: </td>";
         test_row.innerHTML = "<td>Test Scores: </td>";
         cosine_row.innerHTML = "<td>Cosine Scores:</td>";
+        js_row.innerHTML = "<td>JSD Scores:</td>";
 
         // load data from json files
         const test = await fetch(filename)
@@ -113,37 +118,41 @@
         // retrieve alignments
         let gold_align = needleman_wunsch_align(gold_phrase, gold_logit_chars);
         let test_align = needleman_wunsch_align(gold_phrase, test_logit_chars);
-        let cosine_align = needleman_wunsch_align(gold.logits, test.logits, cosinesim);
+        // let cosine_align = needleman_wunsch_align(gold.logits, test.logits, cosinesim);
         // console.log(gold_align);
         // console.log(test_align);
-        console.log(cosine_align);
+        // console.log(cosine_align);
 
         let best_golds = [];
         let best_tests = [];
-        let best_cos = [];
+        let best_gold_indices = [];
 
         // get highest score for each character in gold
         let c = 0;
         let c_index = alphabet_index.get(gold_phrase[0]);
         // have to create array of length for comparitor using a[c_index]
         let a = new Array(gold.logits[0].length).fill(0.0);
+        let a_index = 0;
         for (let i = 0; i < gold_align.length; i++) {
             if (gold_align[i][0] !== c) { // save best gold and increment c
                 best_golds[c] = a;
+                best_gold_indices[c] = a_index;
                 a = new Array(gold.logits[0].length).fill(0.0);
                 c++;
                 c_index = alphabet_index.get(gold_phrase[c]);
             }
-            console.log(c + ': ' + c_index);
-            console.log(gold.logits[gold_align[i][1]]);
+            // console.log(c + ': ' + c_index);
+            // console.log(gold.logits[gold_align[i][1]]);
             if (gold.logits[gold_align[i][1]][c_index] > a[c_index]) {
                 a = gold.logits[gold_align[i][1]];
+                a_index = i;
             }
             // if (Math.max(...gold.logits[gold_align[i][1]]) > Math.max(...a)) {
             //     a = gold.logits[gold_align[i][1]];
             // }
         }
         best_golds[c] = a;
+        best_gold_indices[c] = a_index;
 
         // get highest score for each character in test
         c = 0;
@@ -156,8 +165,8 @@
                 c++;
                 c_index = alphabet_index.get(gold_phrase[c]);
             }
-            console.log(c + ': ' + c_index);
-            console.log(test.logits[test_align[i][1]]);
+            // console.log(c + ': ' + c_index);
+            // console.log(test.logits[test_align[i][1]]);
             if (test.logits[test_align[i][1]][c_index] > a[c_index]) {
                 a = test.logits[test_align[i][1]];
             }
@@ -180,20 +189,40 @@
         // insert the raw max test scores into the table
         for (let i = 0; i < best_tests.length; i++) {
             let new_cell = test_row.insertCell();
-            let new_col = document.createElement("col");
-            if (gold_phrase[i] !== ' ') {
-                new_col.style.backgroundColor = "rgba(255, 0, 0, " + Math.max(.6 - best_tests[i][alphabet_index.get(gold_phrase[i])], 0) + ")"
-            }
-            colgroup.append(new_col);
+            // let new_col = document.createElement("col");
+            // if (gold_phrase[i] !== ' ') {
+            //     new_col.style.backgroundColor = "rgba(255, 0, 0, " + Math.max(.6 - best_tests[i][alphabet_index.get(gold_phrase[i])], 0) + ")"
+            // }
+            // colgroup.append(new_col);
             new_cell.innerText = best_tests[i][alphabet_index.get(gold_phrase[i])].toFixed(3);
+            new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max(.6 - best_tests[i][alphabet_index.get(gold_phrase[i])], 0) + ")"
         }
 
+        // naively insert cosine sim
         for (let i = 0; i < best_golds.length; i++) {
             let new_cell = cosine_row.insertCell();
-            // console.log("best gold at " + i + ": " + best_golds[i]);
-            // console.log("best test at " + i + ": " + best_tests[i]);
-            new_cell.innerText = cosinesim(best_golds[i], best_tests[i]).toFixed(3);
-            // new_cell.innerText = Math.max(...best_golds[i]).toFixed(3);
+            let cos = cosinesim(best_golds[i], best_tests[i]);
+            let best_fixed = [];
+            let test_fixed = [];
+            for (let j = 0; j < best_golds[i].length; j++) {
+                best_fixed.push(best_golds[i][j].toFixed(20));
+                test_fixed.push(best_tests[i][j].toFixed(20));
+            }
+            console.log('Gold at ' + i + ': ' + best_fixed);
+            // console.log(best_golds[i]);
+            console.log('Test at ' + i + ': ' + test_fixed);
+            // console.log(best_tests[i]);
+            console.log('cos at ' + i + ': ' + cos);
+            new_cell.innerText = cos.toFixed(3);
+            new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max((.6 - cos), 0) + ")"
+        }
+
+        // naively insert Jensen-Shannon
+        for (let i = 0; i < best_golds.length; i++) {
+            let new_cell = js_row.insertCell();
+            let jsd = jensen_shannon(best_golds[i], best_tests[i]);
+            new_cell.innerText = (1 - jsd).toFixed(3);
+            new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max((.6 - (1 - jsd)), 0) + ")"
         }
 
 //         for (let i = 0; i < best_golds.length; i++) {

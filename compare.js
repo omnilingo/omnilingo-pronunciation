@@ -1,5 +1,5 @@
-// const { kldivergence,  } = require('mathjs')
 // import {kldivergence} from 'mathjs'
+// const { kldivergence,  } = require('mathjs')
 
 function cosinesim(x, y){
     var dotproduct=0;
@@ -24,7 +24,7 @@ function jensen_shannon (x, y) {
     for(let i = 0; i < x.length; i++){
         m[i] = (x[i] + y[i]) / 2;
     }
-    return (kldivergence(x, m) + kldivergence(y, m)) / 2;
+    return (math.kldivergence(x, m) + math.kldivergence(y, m)) / 2;
 }
 
 function default_scorer (x, y) {
