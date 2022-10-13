@@ -86,11 +86,15 @@
         // load data from json files
         const test = await fetch(filename)
             .then(function (response) {
-                return response.json();
+                return response.text().then(function (value) {
+                    return JSON.parse(value.replace(/\t/g, "\\t"));
+                })
             });
         const gold = await fetch(gold_filename)
             .then(function (response) {
-                return response.json();
+                return response.text().then(function (value) {
+                        return JSON.parse(value.replace(/\t/g, "\\t"));
+                    })
             });
 
         // retrieve gold text from gold json
@@ -112,13 +116,13 @@
         }
 
         // get logit characters
-        let gold_logit_chars = get_logit_chars(gold.logits, gold.alphabet);
-        let test_logit_chars = get_logit_chars(test.logits, test.alphabet);
+        let gold_logit_chars = get_logit_chars(gold.emissions, gold.alphabet);
+        let test_logit_chars = get_logit_chars(test.emissions, test.alphabet);
 
         // retrieve alignments
         let gold_align = needleman_wunsch_align(gold_phrase, gold_logit_chars);
         let test_align = needleman_wunsch_align(gold_phrase, test_logit_chars);
-        // let cosine_align = needleman_wunsch_align(gold.logits, test.logits, cosinesim);
+        // let cosine_align = needleman_wunsch_align(gold.emissions, test.emissions, cosinesim);
         // console.log(gold_align);
         // console.log(test_align);
         // console.log(cosine_align);
@@ -131,24 +135,24 @@
         let c = 0;
         let c_index = alphabet_index.get(gold_phrase[0]);
         // have to create array of length for comparitor using a[c_index]
-        let a = new Array(gold.logits[0].length).fill(0.0);
+        let a = new Array(gold.emissions[0].length).fill(0.0);
         let a_index = 0;
         for (let i = 0; i < gold_align.length; i++) {
             if (gold_align[i][0] !== c) { // save best gold and increment c
                 best_golds[c] = a;
                 best_gold_indices[c] = a_index;
-                a = new Array(gold.logits[0].length).fill(0.0);
+                a = new Array(gold.emissions[0].length).fill(0.0);
                 c++;
                 c_index = alphabet_index.get(gold_phrase[c]);
             }
             // console.log(c + ': ' + c_index);
-            // console.log(gold.logits[gold_align[i][1]]);
-            if (gold.logits[gold_align[i][1]][c_index] > a[c_index]) {
-                a = gold.logits[gold_align[i][1]];
+            // console.log(gold.emissions[gold_align[i][1]]);
+            if (gold.emissions[gold_align[i][1]][c_index] > a[c_index]) {
+                a = gold.emissions[gold_align[i][1]];
                 a_index = i;
             }
-            // if (Math.max(...gold.logits[gold_align[i][1]]) > Math.max(...a)) {
-            //     a = gold.logits[gold_align[i][1]];
+            // if (Math.max(...gold.emissions[gold_align[i][1]]) > Math.max(...a)) {
+            //     a = gold.emissions[gold_align[i][1]];
             // }
         }
         best_golds[c] = a;
@@ -157,21 +161,21 @@
         // get highest score for each character in test
         c = 0;
         c_index = alphabet_index.get(gold_phrase[0]);
-        a = new Array(gold.logits[0].length).fill(0.0);
+        a = new Array(gold.emissions[0].length).fill(0.0);
         for (let i = 0; i < test_align.length; i++) {
             if (test_align[i][0] !== c) { // save best test and increment c
                 best_tests[c] = a;
-                a = new Array(gold.logits[0].length).fill(0.0);
+                a = new Array(gold.emissions[0].length).fill(0.0);
                 c++;
                 c_index = alphabet_index.get(gold_phrase[c]);
             }
             // console.log(c + ': ' + c_index);
-            // console.log(test.logits[test_align[i][1]]);
-            if (test.logits[test_align[i][1]][c_index] > a[c_index]) {
-                a = test.logits[test_align[i][1]];
+            // console.log(test.emissions[test_align[i][1]]);
+            if (test.emissions[test_align[i][1]][c_index] > a[c_index]) {
+                a = test.emissions[test_align[i][1]];
             }
-            // if (Math.max(...test.logits[test_align[i][1]]) > Math.max(...a)) {
-            //     a = test.logits[test_align[i][1]];
+            // if (Math.max(...test.emissions[test_align[i][1]]) > Math.max(...a)) {
+            //     a = test.emissions[test_align[i][1]];
             // }
         }
         best_tests[c] = a;

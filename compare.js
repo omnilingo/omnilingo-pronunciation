@@ -1,11 +1,12 @@
 // import {kldivergence} from 'mathjs'
-// const { kldivergence,  } = require('mathjs')
+const { kldivergence  } = require('mathjs')
+// const math = import('./math');
 
 function cosinesim(x, y){
     var dotproduct=0;
     var mx=0;
     var my=0;
-    for(i = 0; i < x.length; i++){
+    for(let i = 0; i < x.length; i++){
         dotproduct += (x[i] * y[i]);
         mx += (x[i]*x[i]);
         my += (y[i]*y[i]);
@@ -24,7 +25,7 @@ function jensen_shannon (x, y) {
     for(let i = 0; i < x.length; i++){
         m[i] = (x[i] + y[i]) / 2;
     }
-    return (math.kldivergence(x, m) + math.kldivergence(y, m)) / 2;
+    return (kldivergence(x, m) + kldivergence(y, m)) / 2;
 }
 
 function default_scorer (x, y) {
@@ -100,3 +101,5 @@ function needleman_wunsch_align(x, y, scorer = default_scorer) {
     // console.log(alignment);
     return alignment
 }
+
+module.exports = {cosinesim, needleman_wunsch_align, jensen_shannon}

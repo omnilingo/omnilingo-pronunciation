@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compare</title>
+    <style>
+        table, th, td {
+            border:1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            margin-left:auto;
+            margin-right:auto;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div style="text-align: center">
+    <br><br>
+    <table id="feedback_table">
+        <colgroup id="table_colgroup">
+            <col>
+        </colgroup>
+        <tr id="text">
+        </tr>
+        <tr id="gold_scores">
+        </tr>
+        <tr id="test_scores">
+        </tr>
+        <tr id="cosine">
+        </tr>
+        <tr id="js_row">
+        </tr>
+    </table>
+    <br>
+    <span>gold file name</span>
+    <input type="text" id="gold_filename" value="data/gold.json"><br>
+    <span>test file name</span>
+    <input type="text" id="filename" value="data/test-1.json">
+    <br>
+    <button type="button" onclick="run_compare()">Compare</button>
+</div>
+</body>
+</html>
+
+<script src="math.js"></script>
+<script src="compare.js"></script>
+<script src="compare_all.js"></script>
