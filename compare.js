@@ -1,6 +1,6 @@
 // import {kldivergence} from 'mathjs'
-const { kldivergence  } = require('mathjs')
-// const math = import('./math');
+// const { kldivergence  } = require('mathjs')
+const math = import('./math');
 
 function cosinesim(x, y){
     var dotproduct=0;
@@ -102,4 +102,4 @@ function needleman_wunsch_align(x, y, scorer = default_scorer) {
     return alignment
 }
 
-module.exports = {cosinesim, needleman_wunsch_align, jensen_shannon}
+// module.exports = {cosinesim, needleman_wunsch_align, jensen_shannon}

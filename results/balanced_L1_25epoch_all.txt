@@ -1,0 +1,679 @@
+/home/nils/workspace/speech_correction/venv/bin/python3 /home/nils/workspace/speech_correction/omnilingo-pronunciation/mlp.py
+Beginning training with lr 1e-06
+Training dataset test_scores
+Starting epoch 1
+/home/nils/workspace/speech_correction/venv/lib/python3.6/site-packages/torch/nn/modules/loss.py:96: UserWarning: Using a target size (torch.Size([10, 1])) that is different to the input size (torch.Size([10, 2])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0007, 0.0014]])
+tensor([[1]])
+tensor([1])
+/home/nils/workspace/speech_correction/venv/lib/python3.6/site-packages/torch/nn/modules/loss.py:96: UserWarning: Using a target size (torch.Size([1, 1])) that is different to the input size (torch.Size([1, 2])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Raw Recall: 1290.0	Raw True Positive: 1290.0
+Test Error:
+ Accuracy: 50.7%, Avg loss: 0.504799
+
+Precision: 0.5102848101265823 from 2528
+Recall: 0.6373517786561265 from 2024
+F1: 0.5667838312829526
+Training dataset cos_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0248, 0.0802]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 2008.0	Raw True Positive: 2008.0
+Test Error:
+ Accuracy: 50.2%, Avg loss: 0.500930
+
+Precision: 0.502 from 4000
+Recall: 1.0 from 2008
+F1: 0.6684420772303595
+Training dataset jsd_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0237, 0.0065]])
+tensor([[0]])
+tensor([0])
+Raw Recall: 1376.0	Raw True Positive: 1376.0
+Test Error:
+ Accuracy: 51.2%, Avg loss: 0.495545
+
+Precision: 0.5066273932253313 from 2716
+Recall: 0.6918049270990447 from 1989
+F1: 0.5849096705632306
+Beginning training with lr 5e-06
+Training dataset test_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0347, 0.0834]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1621.0	Raw True Positive: 1621.0
+Test Error:
+ Accuracy: 47.8%, Avg loss: 0.500438
+
+Precision: 0.490172361657091 from 3307
+Recall: 0.8008893280632411 from 2024
+F1: 0.6081410617145001
+Training dataset cos_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0269, 0.0046]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 1258.0	Raw True Positive: 1258.0
+Test Error:
+ Accuracy: 51.9%, Avg loss: 0.498413
+
+Precision: 0.5170571311138512 from 2433
+Recall: 0.6264940239043825 from 2008
+F1: 0.5665390677775275
+Training dataset jsd_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0328, 0.0245]])
+tensor([[0]])
+tensor([0])
+Raw Recall: 1291.0	Raw True Positive: 1291.0
+Test Error:
+ Accuracy: 48.7%, Avg loss: 0.484834
+
+Precision: 0.4882753403933434 from 2644
+Recall: 0.649069884364002 from 1989
+F1: 0.5573062810274121
+Beginning training with lr 1e-05
+Training dataset test_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.1059, 0.1660]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1936.0	Raw True Positive: 1936.0
+Test Error:
+ Accuracy: 51.5%, Avg loss: 0.482519
+
+Precision: 0.5112226036440454 from 3787
+Recall: 0.9565217391304348 from 2024
+F1: 0.6663224918258476
+Training dataset cos_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0085, 0.0091]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1469.0	Raw True Positive: 1469.0
+Test Error:
+ Accuracy: 50.4%, Avg loss: 0.497048
+
+Precision: 0.5044642857142857 from 2912
+Recall: 0.7315737051792829 from 2008
+F1: 0.5971544715447153
+Training dataset jsd_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.1182, 0.0655]])
+tensor([[0]])
+tensor([0])
+Raw Recall: 942.0	Raw True Positive: 942.0
+Test Error:
+ Accuracy: 49.4%, Avg loss: 0.480081
+
+Precision: 0.49113660062565173 from 1918
+Recall: 0.473604826546003 from 1989
+F1: 0.4822114154082416
+Beginning training with lr 5e-05
+Training dataset test_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0183, 0.0156]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 786.0	Raw True Positive: 786.0
+Test Error:
+ Accuracy: 49.4%, Avg loss: 0.414607
+
+Precision: 0.4996821360457724 from 1573
+Recall: 0.3883399209486166 from 2024
+F1: 0.4370308590492077
+Training dataset cos_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[ 0.0104, -0.0068]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 681.0	Raw True Positive: 681.0
+Test Error:
+ Accuracy: 48.2%, Avg loss: 0.465908
+
+Precision: 0.4772249474421864 from 1427
+Recall: 0.3391434262948207 from 2008
+F1: 0.39650655021834064
+Training dataset jsd_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0746, 0.0559]])
+tensor([[0]])
+tensor([0])
+Raw Recall: 774.0	Raw True Positive: 774.0
+Test Error:
+ Accuracy: 50.1%, Avg loss: 0.467629
+
+Precision: 0.4980694980694981 from 1554
+Recall: 0.3891402714932127 from 1989
+F1: 0.43691786621507195
+Beginning training with lr 0.0001
+Training dataset test_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0102, 0.0113]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1060.0	Raw True Positive: 1060.0
+Test Error:
+ Accuracy: 49.2%, Avg loss: 0.384335
+
+Precision: 0.4981203007518797 from 2128
+Recall: 0.5237154150197628 from 2024
+F1: 0.5105973025048169
+Training dataset cos_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0105, 0.0128]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 889.0	Raw True Positive: 889.0
+Test Error:
+ Accuracy: 51.3%, Avg loss: 0.462618
+
+Precision: 0.5174621653084982 from 1718
+Recall: 0.44272908366533864 from 2008
+F1: 0.477187332259796
+Training dataset jsd_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.1422, 0.1400]])
+tensor([[0]])
+tensor([0])
+Raw Recall: 1401.0	Raw True Positive: 1401.0
+Test Error:
+ Accuracy: 50.2%, Avg loss: 0.461379
+
+Precision: 0.49964336661911557 from 2804
+Recall: 0.7043740573152338 from 1989
+F1: 0.5846025453786773
+Beginning training with lr 0.0005
+Training dataset test_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0105, 0.0083]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 454.0	Raw True Positive: 454.0
+Test Error:
+ Accuracy: 55.5%, Avg loss: 0.316352
+
+Precision: 0.6827067669172933 from 665
+Recall: 0.22430830039525693 from 2024
+F1: 0.33767199702491635
+Training dataset cos_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0304, 0.0284]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 663.0	Raw True Positive: 663.0
+Test Error:
+ Accuracy: 48.6%, Avg loss: 0.450147
+
+Precision: 0.48253275109170307 from 1374
+Recall: 0.3301792828685259 from 2008
+F1: 0.3920756948551153
+Training dataset jsd_scores
+Starting epoch 1
+Starting epoch 2
+Starting epoch 3
+Starting epoch 4
+Starting epoch 5
+Starting epoch 6
+Starting epoch 7
+Starting epoch 8
+Starting epoch 9
+Starting epoch 10
+Starting epoch 11
+Starting epoch 12
+Starting epoch 13
+Starting epoch 14
+Starting epoch 15
+Starting epoch 16
+Starting epoch 17
+Starting epoch 18
+Starting epoch 19
+Starting epoch 20
+Starting epoch 21
+Starting epoch 22
+Starting epoch 23
+Starting epoch 24
+Starting epoch 25
+Training process has finished.
+tensor([[0.0033, 0.0050]])
+tensor([[0]])
+tensor([1])
+Raw Recall: 1606.0	Raw True Positive: 1606.0
+Test Error:
+ Accuracy: 49.5%, Avg loss: 0.454462
+
+Precision: 0.49537322640345466 from 3242
+Recall: 0.8074409250879839 from 1989
+F1: 0.6140317338940928
+
+Process finished with exit code 0
