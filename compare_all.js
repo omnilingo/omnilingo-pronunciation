@@ -1,5 +1,5 @@
 var fs = require('fs')
-var {cosinesim, needleman_wunsch_align, jensen_shannon} = require('./compare')
+var {cosinesim, needleman_wunsch_align, jensen_shannon} = require('./node_compare')
 
 function get_logit_chars(logits, alphabet) {
     let logit_chars = [];
@@ -73,14 +73,17 @@ async function run_compare() {
         } catch (err) {
             skipped_files++;
             //console.log("skipping file " + "../STT/data/en/clips/" + tsv[row_i][1].slice(0, -3) + "wav")
-            continue
+            continue;
         }
         let gold_phrase = clean_text(tsv[row_i][2]);
         gold_filename = "../STT/data/en/json/" + tsv[row_i][1] + ".json";
         const gold = JSON.parse(fs.readFileSync(gold_filename, 'utf8').replace(/\t/g, "\\t"));
+        
+        //console.log("Gold:")
+        //console.log(gold)
 
         let row_j = row_i + 1;
-        console.log(row_j + ": " + clean_text(tsv[row_j][2]));
+        // console.log(row_j + ": " + clean_text(tsv[row_j][2]));
         while (row_j < tsv.length && clean_text(tsv[row_j][2]) === gold_phrase) {
             //console.log(row_j);
             // if (!await check_file_exists("../STT/data/en/clips/" + tsv[row_j][1].slice(0, -3) + "wav")) {
@@ -90,12 +93,13 @@ async function run_compare() {
                 fs.statSync("../STT/data/en/clips/" + tsv[row_j][1].slice(0, -3) + "wav");
             } catch (err) {
                 row_j++;
-                continue
+                continue;
             }
             filename = "../STT/data/en/json/" + tsv[row_j][1] + ".json";
-            console.log("reading files: " + filename);
+            console.log("comparing files: " + gold_filename + " and " + filename);
             // load data from json files
             const test = JSON.parse(fs.readFileSync(filename, 'utf8').replace(/\t/g, "\\t"));
+            
             // const test = await fetch(filename)
             //     .then(function (response) {
             //         return response.text().then(function (value) {

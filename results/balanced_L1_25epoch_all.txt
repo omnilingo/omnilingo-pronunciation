@@ -29,18 +29,18 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0007, 0.0014]])
-tensor([[1]])
-tensor([1])
+tensor([[0.1566, 0.0408]])
+tensor([[0]])
+tensor([0])
 /home/nils/workspace/speech_correction/venv/lib/python3.6/site-packages/torch/nn/modules/loss.py:96: UserWarning: Using a target size (torch.Size([1, 1])) that is different to the input size (torch.Size([1, 2])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
   return F.l1_loss(input, target, reduction=self.reduction)
-Raw Recall: 1290.0	Raw True Positive: 1290.0
+Raw Recall: 545.0	Raw True Positive: 545.0
 Test Error:
- Accuracy: 50.7%, Avg loss: 0.504799
+ Accuracy: 54.1%, Avg loss: 0.500915
 
-Precision: 0.5102848101265823 from 2528
-Recall: 0.6373517786561265 from 2024
-F1: 0.5667838312829526
+Precision: 0.5962800875273523 from 914
+Recall: 0.2707401887729757 from 2013
+F1: 0.37239494362828834
 Training dataset cos_scores
 Starting epoch 1
 Starting epoch 2
@@ -68,16 +68,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0248, 0.0802]])
+tensor([[0.1893, 0.1083]])
 tensor([[1]])
-tensor([1])
-Raw Recall: 2008.0	Raw True Positive: 2008.0
+tensor([0])
+Raw Recall: 311.0	Raw True Positive: 311.0
 Test Error:
- Accuracy: 50.2%, Avg loss: 0.500930
+ Accuracy: 46.6%, Avg loss: 0.492716
 
-Precision: 0.502 from 4000
-Recall: 1.0 from 2008
-F1: 0.6684420772303595
+Precision: 0.4065359477124183 from 765
+Recall: 0.15604616156547918 from 1993
+F1: 0.22552574329224076
 Training dataset jsd_scores
 Starting epoch 1
 Starting epoch 2
@@ -105,16 +105,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0237, 0.0065]])
+tensor([[0.0587, 0.0615]])
 tensor([[0]])
-tensor([0])
-Raw Recall: 1376.0	Raw True Positive: 1376.0
+tensor([1])
+Raw Recall: 1684.0	Raw True Positive: 1684.0
 Test Error:
- Accuracy: 51.2%, Avg loss: 0.495545
+ Accuracy: 52.2%, Avg loss: 0.497445
 
-Precision: 0.5066273932253313 from 2716
-Recall: 0.6918049270990447 from 1989
-F1: 0.5849096705632306
+Precision: 0.5148272699480281 from 3271
+Recall: 0.8378109452736319 from 2010
+F1: 0.6377580003787162
 Beginning training with lr 5e-06
 Training dataset test_scores
 Starting epoch 1
@@ -143,16 +143,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0347, 0.0834]])
-tensor([[1]])
+tensor([[0.3815, 0.4149]])
+tensor([[0]])
 tensor([1])
-Raw Recall: 1621.0	Raw True Positive: 1621.0
+Raw Recall: 1163.0	Raw True Positive: 1163.0
 Test Error:
- Accuracy: 47.8%, Avg loss: 0.500438
+ Accuracy: 47.4%, Avg loss: 0.488247
 
-Precision: 0.490172361657091 from 3307
-Recall: 0.8008893280632411 from 2024
-F1: 0.6081410617145001
+Precision: 0.48097601323407774 from 2418
+Recall: 0.5777446597118728 from 2013
+F1: 0.5249379372602122
 Training dataset cos_scores
 Starting epoch 1
 Starting epoch 2
@@ -180,16 +180,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0269, 0.0046]])
+tensor([[0.7080, 0.6955]])
 tensor([[1]])
 tensor([0])
-Raw Recall: 1258.0	Raw True Positive: 1258.0
+Raw Recall: 644.0	Raw True Positive: 644.0
 Test Error:
- Accuracy: 51.9%, Avg loss: 0.498413
+ Accuracy: 49.8%, Avg loss: 0.467996
 
-Precision: 0.5170571311138512 from 2433
-Recall: 0.6264940239043825 from 2008
-F1: 0.5665390677775275
+Precision: 0.4946236559139785 from 1302
+Recall: 0.32313095835423983 from 1993
+F1: 0.39089529590288313
 Training dataset jsd_scores
 Starting epoch 1
 Starting epoch 2
@@ -217,16 +217,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0328, 0.0245]])
+tensor([[0.0323, 0.0330]])
 tensor([[0]])
-tensor([0])
-Raw Recall: 1291.0	Raw True Positive: 1291.0
+tensor([1])
+Raw Recall: 732.0	Raw True Positive: 732.0
 Test Error:
- Accuracy: 48.7%, Avg loss: 0.484834
+ Accuracy: 50.0%, Avg loss: 0.480189
 
-Precision: 0.4882753403933434 from 2644
-Recall: 0.649069884364002 from 1989
-F1: 0.5573062810274121
+Precision: 0.5030927835051546 from 1455
+Recall: 0.3641791044776119 from 2010
+F1: 0.42251082251082245
 Beginning training with lr 1e-05
 Training dataset test_scores
 Starting epoch 1
@@ -255,16 +255,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.1059, 0.1660]])
-tensor([[1]])
+tensor([[0.6514, 0.6694]])
+tensor([[0]])
 tensor([1])
-Raw Recall: 1936.0	Raw True Positive: 1936.0
+Raw Recall: 1413.0	Raw True Positive: 1413.0
 Test Error:
- Accuracy: 51.5%, Avg loss: 0.482519
+ Accuracy: 49.7%, Avg loss: 0.459151
 
-Precision: 0.5112226036440454 from 3787
-Recall: 0.9565217391304348 from 2024
-F1: 0.6663224918258476
+Precision: 0.5003541076487252 from 2824
+Recall: 0.7019374068554396 from 2013
+F1: 0.5842464337399215
 Training dataset cos_scores
 Starting epoch 1
 Starting epoch 2
@@ -292,16 +292,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0085, 0.0091]])
+tensor([[0.8863, 0.8787]])
 tensor([[1]])
-tensor([1])
-Raw Recall: 1469.0	Raw True Positive: 1469.0
+tensor([0])
+Raw Recall: 722.0	Raw True Positive: 722.0
 Test Error:
- Accuracy: 50.4%, Avg loss: 0.497048
+ Accuracy: 46.6%, Avg loss: 0.459131
 
-Precision: 0.5044642857142857 from 2912
-Recall: 0.7315737051792829 from 2008
-F1: 0.5971544715447153
+Precision: 0.4549464398235665 from 1587
+Recall: 0.3622679377822378 from 1993
+F1: 0.40335195530726253
 Training dataset jsd_scores
 Starting epoch 1
 Starting epoch 2
@@ -329,16 +329,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.1182, 0.0655]])
+tensor([[-0.0029,  0.0097]])
 tensor([[0]])
-tensor([0])
-Raw Recall: 942.0	Raw True Positive: 942.0
+tensor([1])
+Raw Recall: 1301.0	Raw True Positive: 1301.0
 Test Error:
- Accuracy: 49.4%, Avg loss: 0.480081
+ Accuracy: 49.5%, Avg loss: 0.472193
 
-Precision: 0.49113660062565173 from 1918
-Recall: 0.473604826546003 from 1989
-F1: 0.4822114154082416
+Precision: 0.49808575803981625 from 2612
+Recall: 0.6472636815920398 from 2010
+F1: 0.5629597576806578
 Beginning training with lr 5e-05
 Training dataset test_scores
 Starting epoch 1
@@ -367,16 +367,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0183, 0.0156]])
-tensor([[1]])
+tensor([[0.2202, 0.2049]])
+tensor([[0]])
 tensor([0])
-Raw Recall: 786.0	Raw True Positive: 786.0
+Raw Recall: 1167.0	Raw True Positive: 1167.0
 Test Error:
- Accuracy: 49.4%, Avg loss: 0.414607
+ Accuracy: 49.9%, Avg loss: 0.394314
 
-Precision: 0.4996821360457724 from 1573
-Recall: 0.3883399209486166 from 2024
-F1: 0.4370308590492077
+Precision: 0.5021514629948365 from 2324
+Recall: 0.5797317436661699 from 2013
+F1: 0.5381600184459303
 Training dataset cos_scores
 Starting epoch 1
 Starting epoch 2
@@ -404,16 +404,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[ 0.0104, -0.0068]])
+tensor([[0.6826, 0.7052]])
 tensor([[1]])
-tensor([0])
-Raw Recall: 681.0	Raw True Positive: 681.0
+tensor([1])
+Raw Recall: 1354.0	Raw True Positive: 1354.0
 Test Error:
- Accuracy: 48.2%, Avg loss: 0.465908
+ Accuracy: 49.1%, Avg loss: 0.439097
 
-Precision: 0.4772249474421864 from 1427
-Recall: 0.3391434262948207 from 2008
-F1: 0.39650655021834064
+Precision: 0.4921846601235914 from 2751
+Recall: 0.6793778223783241 from 1993
+F1: 0.5708263069139966
 Training dataset jsd_scores
 Starting epoch 1
 Starting epoch 2
@@ -441,16 +441,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0746, 0.0559]])
+tensor([[0.0188, 0.0244]])
 tensor([[0]])
-tensor([0])
-Raw Recall: 774.0	Raw True Positive: 774.0
+tensor([1])
+Raw Recall: 1173.0	Raw True Positive: 1173.0
 Test Error:
- Accuracy: 50.1%, Avg loss: 0.467629
+ Accuracy: 49.1%, Avg loss: 0.449297
 
-Precision: 0.4980694980694981 from 1554
-Recall: 0.3891402714932127 from 1989
-F1: 0.43691786621507195
+Precision: 0.4947279628848587 from 2371
+Recall: 0.5835820895522388 from 2010
+F1: 0.5354941794110933
 Beginning training with lr 0.0001
 Training dataset test_scores
 Starting epoch 1
@@ -479,16 +479,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0102, 0.0113]])
-tensor([[1]])
-tensor([1])
-Raw Recall: 1060.0	Raw True Positive: 1060.0
+tensor([[0.1047, 0.1039]])
+tensor([[0]])
+tensor([0])
+Raw Recall: 1067.0	Raw True Positive: 1067.0
 Test Error:
- Accuracy: 49.2%, Avg loss: 0.384335
+ Accuracy: 46.4%, Avg loss: 0.362254
 
-Precision: 0.4981203007518797 from 2128
-Recall: 0.5237154150197628 from 2024
-F1: 0.5105973025048169
+Precision: 0.47108167770419423 from 2265
+Recall: 0.5300546448087432 from 2013
+F1: 0.498831229546517
 Training dataset cos_scores
 Starting epoch 1
 Starting epoch 2
@@ -516,16 +516,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0105, 0.0128]])
+tensor([[0.5586, 0.5746]])
 tensor([[1]])
 tensor([1])
-Raw Recall: 889.0	Raw True Positive: 889.0
+Raw Recall: 1248.0	Raw True Positive: 1248.0
 Test Error:
- Accuracy: 51.3%, Avg loss: 0.462618
+ Accuracy: 49.2%, Avg loss: 0.425746
 
-Precision: 0.5174621653084982 from 1718
-Recall: 0.44272908366533864 from 2008
-F1: 0.477187332259796
+Precision: 0.4926964074220292 from 2533
+Recall: 0.6261916708479679 from 1993
+F1: 0.551480335837384
 Training dataset jsd_scores
 Starting epoch 1
 Starting epoch 2
@@ -553,16 +553,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.1422, 0.1400]])
+tensor([[0.2152, 0.2153]])
 tensor([[0]])
-tensor([0])
-Raw Recall: 1401.0	Raw True Positive: 1401.0
+tensor([1])
+Raw Recall: 1211.0	Raw True Positive: 1211.0
 Test Error:
- Accuracy: 50.2%, Avg loss: 0.461379
+ Accuracy: 48.3%, Avg loss: 0.435884
 
-Precision: 0.49964336661911557 from 2804
-Recall: 0.7043740573152338 from 1989
-F1: 0.5846025453786773
+Precision: 0.4883064516129032 from 2480
+Recall: 0.6024875621890547 from 2010
+F1: 0.5394209354120266
 Beginning training with lr 0.0005
 Training dataset test_scores
 Starting epoch 1
@@ -591,16 +591,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0105, 0.0083]])
-tensor([[1]])
-tensor([0])
-Raw Recall: 454.0	Raw True Positive: 454.0
+tensor([[0.0279, 0.0280]])
+tensor([[0]])
+tensor([1])
+Raw Recall: 1700.0	Raw True Positive: 1700.0
 Test Error:
- Accuracy: 55.5%, Avg loss: 0.316352
+ Accuracy: 52.5%, Avg loss: 0.309114
 
-Precision: 0.6827067669172933 from 665
-Recall: 0.22430830039525693 from 2024
-F1: 0.33767199702491635
+Precision: 0.5170316301703163 from 3288
+Recall: 0.8445106805762543 from 2013
+F1: 0.6413884172797585
 Training dataset cos_scores
 Starting epoch 1
 Starting epoch 2
@@ -628,16 +628,16 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0304, 0.0284]])
+tensor([[0.1751, 0.1723]])
 tensor([[1]])
 tensor([0])
-Raw Recall: 663.0	Raw True Positive: 663.0
+Raw Recall: 1356.0	Raw True Positive: 1356.0
 Test Error:
- Accuracy: 48.6%, Avg loss: 0.450147
+ Accuracy: 52.0%, Avg loss: 0.391623
 
-Precision: 0.48253275109170307 from 1374
-Recall: 0.3301792828685259 from 2008
-F1: 0.3920756948551153
+Precision: 0.5136363636363637 from 2640
+Recall: 0.6803813346713498 from 1993
+F1: 0.5853658536585366
 Training dataset jsd_scores
 Starting epoch 1
 Starting epoch 2
@@ -665,15 +665,15 @@ Starting epoch 23
 Starting epoch 24
 Starting epoch 25
 Training process has finished.
-tensor([[0.0033, 0.0050]])
+tensor([[0.0900, 0.0830]])
 tensor([[0]])
-tensor([1])
-Raw Recall: 1606.0	Raw True Positive: 1606.0
+tensor([0])
+Raw Recall: 622.0	Raw True Positive: 622.0
 Test Error:
- Accuracy: 49.5%, Avg loss: 0.454462
+ Accuracy: 49.8%, Avg loss: 0.413492
 
-Precision: 0.49537322640345466 from 3242
-Recall: 0.8074409250879839 from 1989
-F1: 0.6140317338940928
+Precision: 0.500402252614642 from 1243
+Recall: 0.309452736318408 from 2010
+F1: 0.38241623117122653
 
 Process finished with exit code 0
