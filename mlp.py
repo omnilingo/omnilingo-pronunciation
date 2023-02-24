@@ -60,7 +60,8 @@ for lr in hyperparams:
 
         mlp = MLP().to("cpu")
         # Define the loss function and optimizer
-        loss_function = nn.L1Loss()
+        # loss_function = nn.L1Loss()
+        loss_function = nn.BCELoss()
         optimizer = torch.optim.Adam(mlp.parameters(), lr = lr)
 
         trainloader = torch.utils.data.DataLoader(train_data, batch_size = 5, shuffle = True, num_workers = 1)

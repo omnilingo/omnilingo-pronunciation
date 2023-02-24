@@ -101,7 +101,7 @@ for pair in data_files:
 
 
 # saving the distributions and data to a file so I can access them again later
-with open("results/balanced_dists.txt", 'w') as out_file:
+with open("results/balanced_dists_sk.txt", 'w') as out_file:
     print("Max length: " + str(max_score_len), file = out_file)
     print("Gold Downvotes: " + str(gold_downvotes), file = out_file)
     print("Test Downvotes: " + str(downvotes), file = out_file)
@@ -124,19 +124,23 @@ with open("results/balanced_dists.txt", 'w') as out_file:
 
 def normalize_list_len(in_list, new_len):
     new_list = []
+    labels = []
     for i in in_list:
         # normalize length and put in tensor for input
         i_scores = i[0]
         diff = new_len - len(i_scores)
-        input_tensor = torch.tensor([1 for x in range(math.floor(diff / 2))] + i_scores + [1 for x in range(math.ceil(diff / 2))])
+        input_tensor = [1 for x in range(math.floor(diff / 2))] + i_scores + [1 for x in range(math.ceil(diff / 2))]
+        # input_tensor = torch.tensor([1 for x in range(math.floor(diff / 2))] + i_scores + [1 for x in range(math.ceil(diff / 2))])
 
         # turn labels into one hot encoding
         # i_labels = torch.tensor([i[1]])
         # i_labels = torch.tensor([0.0 if (x != i[1]) else 1.0 for x in range(max_downvotes)])
-        i_labels = torch.tensor([1 if i[1] > 0 else 0])
+        # i_labels = torch.tensor([1 if i[1] > 0 else 0])
+        i_labels = 1 if i[1] > 0 else 0
 
-        new_list.append([input_tensor, i_labels])
-    return new_list
+        new_list.append(input_tensor)
+        labels.append(i_labels)
+    return [new_list, labels]
 
 
 # gold_scores = normalize_list_len(gold_scores, max_score_len)
@@ -144,14 +148,11 @@ def normalize_list_len(in_list, new_len):
 # with open('gold_sample.pickle', 'wb') as out_file:
 #     pickle.dump(gold_scores, out_file)
 test_scores = normalize_list_len(test_scores, max_score_len)
-random.shuffle(test_scores)
-with open('balanced_test_sample.pickle', 'wb') as out_file:
+with open('sk_test_sample.pickle', 'wb') as out_file:
     pickle.dump(test_scores, out_file)
 cos_scores = normalize_list_len(cos_scores, max_score_len)
-random.shuffle(cos_scores)
-with open('balanced_cos_sample.pickle', 'wb') as out_file:
+with open('sk_cos_sample.pickle', 'wb') as out_file:
     pickle.dump(cos_scores, out_file)
 jsd_scores = normalize_list_len(jsd_scores, max_score_len)
-random.shuffle(jsd_scores)
-with open('balanced_jsd_sample.pickle', 'wb') as out_file:
+with open('sk_jsd_sample.pickle', 'wb') as out_file:
     pickle.dump(jsd_scores, out_file)

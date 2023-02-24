@@ -1,0 +1,3827 @@
+/home/nils/workspace/speech_correction/venv/bin/python3 /home/nils/workspace/speech_correction/omnilingo-pronunciation/mlp_diff.py
+Beginning training with lr 1e-06
+Training dataset test_scores
+Starting epoch 1
+/home/nils/workspace/speech_correction/venv/lib/python3.6/site-packages/torch/nn/modules/loss.py:96: UserWarning: Using a target size (torch.Size([5, 1])) that is different to the input size (torch.Size([5, 2])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+/home/nils/workspace/speech_correction/venv/lib/python3.6/site-packages/torch/nn/modules/loss.py:96: UserWarning: Using a target size (torch.Size([1, 1])) that is different to the input size (torch.Size([1, 2])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.l1_loss(input, target, reduction=self.reduction)
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.797876
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.804519
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 0.7%, Avg loss: 0.798156
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 0.9%, Avg loss: 0.756452
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 0.5%, Avg loss: 0.709135
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 0.3%, Avg loss: 0.660157
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.608197
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.551772
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.489064
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.426157
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.357201
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.289134
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.268419
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 0.4%, Avg loss: 0.243409
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 1.0%, Avg loss: 0.228635
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 2.7%, Avg loss: 0.207947
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 6.5%, Avg loss: 0.179042
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 12.3%, Avg loss: 0.182791
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 16.7%, Avg loss: 0.183654
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 20.3%, Avg loss: 0.178410
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 25.1%, Avg loss: 0.186168
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 29.8%, Avg loss: 0.184798
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 34.5%, Avg loss: 0.185126
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 37.7%, Avg loss: 0.185906
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 43.7%, Avg loss: 0.187845
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 44.0%, Avg loss: 0.186454
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 47.2%, Avg loss: 0.187740
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 50.9%, Avg loss: 0.187657
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 50.6%, Avg loss: 0.187147
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 53.7%, Avg loss: 0.188051
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 54.5%, Avg loss: 0.186290
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 54.2%, Avg loss: 0.187673
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 53.6%, Avg loss: 0.189513
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 51.7%, Avg loss: 0.185465
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 56.3%, Avg loss: 0.189516
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 54.4%, Avg loss: 0.188505
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 54.4%, Avg loss: 0.188479
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 53.8%, Avg loss: 0.187685
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 55.5%, Avg loss: 0.191807
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 53.6%, Avg loss: 0.189796
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 55.0%, Avg loss: 0.189899
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 57.6%, Avg loss: 0.191596
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 53.2%, Avg loss: 0.190925
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 58.1%, Avg loss: 0.192718
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 56.3%, Avg loss: 0.192993
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 54.6%, Avg loss: 0.191741
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 56.0%, Avg loss: 0.192409
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 55.0%, Avg loss: 0.192787
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 52.8%, Avg loss: 0.191474
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 50.9%, Avg loss: 0.191758
+
+Training process has finished.
+tensor([[0.4347, 0.5080]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1061.0	Raw True Positive: 1061.0
+Test Error:
+ Accuracy: 53.0%, Avg loss: 0.205420
+
+Precision: 1.0 from 1061
+Recall: 0.5305 from 2000
+F1: 0.6932375040836328
+Training dataset cos_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 1.4%, Avg loss: 0.932778
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 0.6%, Avg loss: 0.917535
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 0.7%, Avg loss: 0.895056
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 0.5%, Avg loss: 0.878410
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 0.5%, Avg loss: 0.862393
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 0.4%, Avg loss: 0.846784
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 0.2%, Avg loss: 0.831471
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.811796
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.793196
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.768867
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.748230
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.728448
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.705532
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.682091
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.653024
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.622164
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.590294
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.557108
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.528440
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.481013
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.446826
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.408666
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.364161
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.314415
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.265217
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.233607
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 0.2%, Avg loss: 0.225500
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 1.4%, Avg loss: 0.198996
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 10.2%, Avg loss: 0.177823
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 18.7%, Avg loss: 0.174641
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 28.1%, Avg loss: 0.177594
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 34.7%, Avg loss: 0.183187
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 41.7%, Avg loss: 0.181715
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 60.1%, Avg loss: 0.181494
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 60.8%, Avg loss: 0.182893
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 64.1%, Avg loss: 0.179153
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 53.3%, Avg loss: 0.180434
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 64.7%, Avg loss: 0.182266
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 50.8%, Avg loss: 0.179303
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 56.1%, Avg loss: 0.185244
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 58.1%, Avg loss: 0.189506
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 54.9%, Avg loss: 0.183192
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 58.4%, Avg loss: 0.186965
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 49.8%, Avg loss: 0.191429
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 53.7%, Avg loss: 0.188985
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 56.6%, Avg loss: 0.187059
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 50.2%, Avg loss: 0.189835
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 54.1%, Avg loss: 0.189197
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 49.5%, Avg loss: 0.191359
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 51.3%, Avg loss: 0.194272
+
+Training process has finished.
+tensor([[0.1877, 0.1957]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1076.0	Raw True Positive: 1076.0
+Test Error:
+ Accuracy: 53.8%, Avg loss: 0.201814
+
+Precision: 1.0 from 1076
+Recall: 0.538 from 2000
+F1: 0.6996098829648895
+Training dataset jsd_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.856770
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 0.4%, Avg loss: 0.822852
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 0.4%, Avg loss: 0.803449
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 0.5%, Avg loss: 0.784404
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 0.6%, Avg loss: 0.762375
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 0.5%, Avg loss: 0.736822
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 0.4%, Avg loss: 0.709413
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 0.3%, Avg loss: 0.678152
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 0.2%, Avg loss: 0.645501
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 0.2%, Avg loss: 0.606617
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.567433
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.519736
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.470082
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.417808
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.357622
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.294391
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.244295
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.216772
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 0.5%, Avg loss: 0.187102
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 4.0%, Avg loss: 0.153012
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 22.1%, Avg loss: 0.139300
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 29.0%, Avg loss: 0.141083
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 33.6%, Avg loss: 0.140242
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 33.7%, Avg loss: 0.141792
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 37.4%, Avg loss: 0.141515
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 35.7%, Avg loss: 0.143795
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 40.2%, Avg loss: 0.144891
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 44.4%, Avg loss: 0.150281
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 42.0%, Avg loss: 0.150498
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 45.3%, Avg loss: 0.151377
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 43.1%, Avg loss: 0.152607
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 44.5%, Avg loss: 0.152989
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 46.1%, Avg loss: 0.156578
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 44.9%, Avg loss: 0.155668
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 44.5%, Avg loss: 0.159663
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 44.5%, Avg loss: 0.162822
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 42.2%, Avg loss: 0.161411
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 43.2%, Avg loss: 0.161699
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 43.3%, Avg loss: 0.162739
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 42.9%, Avg loss: 0.163595
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 43.6%, Avg loss: 0.164753
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 40.2%, Avg loss: 0.165032
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 42.5%, Avg loss: 0.165941
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 45.5%, Avg loss: 0.168346
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 41.6%, Avg loss: 0.169442
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 45.4%, Avg loss: 0.168362
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 41.3%, Avg loss: 0.170458
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 42.9%, Avg loss: 0.170277
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 44.5%, Avg loss: 0.171066
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 43.3%, Avg loss: 0.172679
+
+Training process has finished.
+tensor([[0.8504, 0.8619]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 911.0	Raw True Positive: 911.0
+Test Error:
+ Accuracy: 45.6%, Avg loss: 0.186640
+
+Precision: 1.0 from 911
+Recall: 0.4555 from 2000
+F1: 0.6259017519752662
+Beginning training with lr 5e-06
+Training dataset test_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 0.5%, Avg loss: 0.821588
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 0.2%, Avg loss: 0.629900
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 0.0%, Avg loss: 0.319916
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 11.6%, Avg loss: 0.190048
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 50.8%, Avg loss: 0.184803
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 58.6%, Avg loss: 0.180745
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 60.3%, Avg loss: 0.188192
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 56.1%, Avg loss: 0.183094
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 60.8%, Avg loss: 0.189836
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 55.6%, Avg loss: 0.184029
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 53.5%, Avg loss: 0.186581
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 52.6%, Avg loss: 0.188935
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 49.8%, Avg loss: 0.191590
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 50.5%, Avg loss: 0.188157
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 47.1%, Avg loss: 0.181942
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 44.4%, Avg loss: 0.180758
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 47.6%, Avg loss: 0.179182
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 52.3%, Avg loss: 0.183139
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 53.0%, Avg loss: 0.181902
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 50.1%, Avg loss: 0.177242
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 54.8%, Avg loss: 0.176411
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 53.5%, Avg loss: 0.173962
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 47.5%, Avg loss: 0.167044
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 55.9%, Avg loss: 0.170153
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 53.7%, Avg loss: 0.167133
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 54.9%, Avg loss: 0.161919
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 52.1%, Avg loss: 0.156442
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 55.2%, Avg loss: 0.157817
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 55.3%, Avg loss: 0.156293
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 54.1%, Avg loss: 0.149910
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 54.9%, Avg loss: 0.146065
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 55.3%, Avg loss: 0.144054
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 55.1%, Avg loss: 0.144301
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 53.5%, Avg loss: 0.135252
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 54.3%, Avg loss: 0.130111
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 53.8%, Avg loss: 0.132839
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 62.7%, Avg loss: 0.130844
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 53.6%, Avg loss: 0.123778
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 58.9%, Avg loss: 0.120122
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 54.3%, Avg loss: 0.116576
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 56.4%, Avg loss: 0.117702
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 61.3%, Avg loss: 0.125842
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 62.2%, Avg loss: 0.116780
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 62.4%, Avg loss: 0.117061
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 64.7%, Avg loss: 0.110694
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 57.4%, Avg loss: 0.114142
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 55.1%, Avg loss: 0.107701
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 52.9%, Avg loss: 0.112295
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 56.3%, Avg loss: 0.108670
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 59.5%, Avg loss: 0.111649
+
+Training process has finished.
+tensor([[0.5972, 0.6451]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1192.0	Raw True Positive: 1192.0
+Test Error:
+ Accuracy: 59.6%, Avg loss: 0.125573
+
+Precision: 1.0 from 1192
+Recall: 0.596 from 2000
+F1: 0.7468671679197995
+Training dataset cos_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 99.1%, Avg loss: 0.887115
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 99.7%, Avg loss: 0.809558
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 99.9%, Avg loss: 0.691936
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 100.0%, Avg loss: 0.549520
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 100.0%, Avg loss: 0.370630
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 99.9%, Avg loss: 0.280098
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 84.7%, Avg loss: 0.169353
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 47.8%, Avg loss: 0.158589
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 26.6%, Avg loss: 0.167145
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 33.5%, Avg loss: 0.160556
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 30.9%, Avg loss: 0.167581
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 23.7%, Avg loss: 0.174637
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 27.0%, Avg loss: 0.165485
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 30.1%, Avg loss: 0.166213
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 32.3%, Avg loss: 0.173599
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 48.8%, Avg loss: 0.163272
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 29.6%, Avg loss: 0.175490
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 30.7%, Avg loss: 0.173301
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 37.3%, Avg loss: 0.170286
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 33.2%, Avg loss: 0.176061
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 33.1%, Avg loss: 0.181620
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 35.7%, Avg loss: 0.181705
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 44.3%, Avg loss: 0.172864
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 38.9%, Avg loss: 0.185900
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 39.6%, Avg loss: 0.178644
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 37.6%, Avg loss: 0.183526
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 32.4%, Avg loss: 0.193574
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 36.9%, Avg loss: 0.182876
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 38.0%, Avg loss: 0.182005
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 36.0%, Avg loss: 0.189022
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 40.7%, Avg loss: 0.182959
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 36.7%, Avg loss: 0.179740
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 39.3%, Avg loss: 0.179036
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 36.4%, Avg loss: 0.196842
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 33.6%, Avg loss: 0.186244
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 35.4%, Avg loss: 0.179011
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 39.7%, Avg loss: 0.181570
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 37.9%, Avg loss: 0.184872
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 36.2%, Avg loss: 0.177753
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 34.3%, Avg loss: 0.182346
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 38.2%, Avg loss: 0.180001
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 42.8%, Avg loss: 0.172745
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 34.5%, Avg loss: 0.187280
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 31.4%, Avg loss: 0.181164
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 41.3%, Avg loss: 0.172024
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 41.0%, Avg loss: 0.171545
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 43.6%, Avg loss: 0.168710
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 39.0%, Avg loss: 0.172109
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 34.7%, Avg loss: 0.180304
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 38.1%, Avg loss: 0.175167
+
+Training process has finished.
+tensor([[6.4918e-04, 2.4468e-05]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 713.0	Raw True Positive: 713.0
+Test Error:
+ Accuracy: 35.6%, Avg loss: 0.179620
+
+Precision: 1.0 from 713
+Recall: 0.3565 from 2000
+F1: 0.525617397714707
+Training dataset jsd_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 7.0%, Avg loss: 0.767513
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 1.3%, Avg loss: 0.598050
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 0.9%, Avg loss: 0.348254
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 40.3%, Avg loss: 0.137508
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 40.0%, Avg loss: 0.143209
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 54.3%, Avg loss: 0.138209
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 51.6%, Avg loss: 0.157076
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 43.7%, Avg loss: 0.157202
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 40.7%, Avg loss: 0.166066
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 43.5%, Avg loss: 0.159753
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 43.1%, Avg loss: 0.168038
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 39.3%, Avg loss: 0.173882
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 44.5%, Avg loss: 0.168462
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 55.2%, Avg loss: 0.166513
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 50.6%, Avg loss: 0.172870
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 48.3%, Avg loss: 0.173354
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 46.0%, Avg loss: 0.177764
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 44.8%, Avg loss: 0.169684
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 49.8%, Avg loss: 0.170247
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 49.2%, Avg loss: 0.172101
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 38.4%, Avg loss: 0.176591
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 49.4%, Avg loss: 0.168865
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 43.8%, Avg loss: 0.174858
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 42.5%, Avg loss: 0.174019
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 47.8%, Avg loss: 0.179106
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 48.1%, Avg loss: 0.169060
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 48.1%, Avg loss: 0.171275
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 48.2%, Avg loss: 0.171301
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 42.1%, Avg loss: 0.169915
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 46.8%, Avg loss: 0.171921
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 48.8%, Avg loss: 0.167949
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 54.9%, Avg loss: 0.165330
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 49.3%, Avg loss: 0.165113
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 42.8%, Avg loss: 0.169935
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 40.3%, Avg loss: 0.166154
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 44.7%, Avg loss: 0.164421
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 46.7%, Avg loss: 0.166102
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 48.2%, Avg loss: 0.163119
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 48.3%, Avg loss: 0.164050
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 46.4%, Avg loss: 0.163833
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 45.8%, Avg loss: 0.161336
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 48.2%, Avg loss: 0.159419
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 52.4%, Avg loss: 0.158916
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 50.5%, Avg loss: 0.157755
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 48.8%, Avg loss: 0.154129
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 45.1%, Avg loss: 0.157124
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 46.0%, Avg loss: 0.157300
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 46.2%, Avg loss: 0.155812
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 51.4%, Avg loss: 0.149612
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 42.9%, Avg loss: 0.150648
+
+Training process has finished.
+tensor([[0.9113, 0.8965]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 852.0	Raw True Positive: 852.0
+Test Error:
+ Accuracy: 42.6%, Avg loss: 0.161824
+
+Precision: 1.0 from 852
+Recall: 0.426 from 2000
+F1: 0.5974754558204769
+Beginning training with lr 1e-05
+Training dataset test_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 100.0%, Avg loss: 0.524293
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 81.8%, Avg loss: 0.168505
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 59.8%, Avg loss: 0.175179
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 55.4%, Avg loss: 0.173627
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 53.5%, Avg loss: 0.173725
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 63.1%, Avg loss: 0.175664
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 63.6%, Avg loss: 0.176669
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 64.9%, Avg loss: 0.180944
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 53.5%, Avg loss: 0.173463
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 51.1%, Avg loss: 0.178029
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 60.8%, Avg loss: 0.183380
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 59.6%, Avg loss: 0.176898
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 61.0%, Avg loss: 0.177526
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 67.6%, Avg loss: 0.184119
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 59.2%, Avg loss: 0.164780
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 53.9%, Avg loss: 0.164664
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 58.2%, Avg loss: 0.160005
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 60.4%, Avg loss: 0.155257
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 61.5%, Avg loss: 0.161998
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 62.2%, Avg loss: 0.154767
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 56.7%, Avg loss: 0.148664
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 55.4%, Avg loss: 0.140045
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 54.6%, Avg loss: 0.134617
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 60.5%, Avg loss: 0.135339
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 59.5%, Avg loss: 0.127801
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 54.8%, Avg loss: 0.127576
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 61.4%, Avg loss: 0.122552
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 60.8%, Avg loss: 0.126557
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 57.0%, Avg loss: 0.122804
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 56.9%, Avg loss: 0.117870
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 50.8%, Avg loss: 0.110631
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 54.2%, Avg loss: 0.114126
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 52.5%, Avg loss: 0.104590
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 53.2%, Avg loss: 0.113395
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 56.7%, Avg loss: 0.110567
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 62.0%, Avg loss: 0.111119
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 55.7%, Avg loss: 0.100669
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 64.0%, Avg loss: 0.110919
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 41.0%, Avg loss: 0.100653
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 70.0%, Avg loss: 0.103745
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 60.1%, Avg loss: 0.098646
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 48.8%, Avg loss: 0.097642
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 60.2%, Avg loss: 0.097627
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 46.1%, Avg loss: 0.100959
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 43.8%, Avg loss: 0.097848
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 38.0%, Avg loss: 0.101581
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 64.8%, Avg loss: 0.099889
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 60.2%, Avg loss: 0.102564
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 56.6%, Avg loss: 0.094359
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 58.8%, Avg loss: 0.094451
+
+Training process has finished.
+tensor([[0.6381, 0.6551]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1192.0	Raw True Positive: 1192.0
+Test Error:
+ Accuracy: 59.6%, Avg loss: 0.108322
+
+Precision: 1.0 from 1192
+Recall: 0.596 from 2000
+F1: 0.7468671679197995
+Training dataset cos_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 99.9%, Avg loss: 0.838477
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 100.0%, Avg loss: 0.637692
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 99.9%, Avg loss: 0.332162
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 68.8%, Avg loss: 0.186825
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 44.8%, Avg loss: 0.191733
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 41.7%, Avg loss: 0.196121
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 49.7%, Avg loss: 0.191348
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 46.2%, Avg loss: 0.207885
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 39.5%, Avg loss: 0.213953
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 51.3%, Avg loss: 0.208567
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 50.0%, Avg loss: 0.209774
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 56.9%, Avg loss: 0.199061
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 49.0%, Avg loss: 0.200024
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 44.9%, Avg loss: 0.195190
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 51.8%, Avg loss: 0.193135
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 41.4%, Avg loss: 0.199656
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 47.7%, Avg loss: 0.198274
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 41.3%, Avg loss: 0.194651
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 49.4%, Avg loss: 0.190283
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 38.2%, Avg loss: 0.189837
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 46.7%, Avg loss: 0.185884
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 52.4%, Avg loss: 0.176445
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 51.2%, Avg loss: 0.170907
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 38.6%, Avg loss: 0.173099
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 41.6%, Avg loss: 0.173662
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 40.5%, Avg loss: 0.167080
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 50.0%, Avg loss: 0.170808
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 48.3%, Avg loss: 0.163447
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 46.6%, Avg loss: 0.154603
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 53.0%, Avg loss: 0.151968
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 61.8%, Avg loss: 0.131300
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 39.2%, Avg loss: 0.154596
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 38.6%, Avg loss: 0.135843
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 63.0%, Avg loss: 0.142015
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 60.6%, Avg loss: 0.133767
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 39.3%, Avg loss: 0.142844
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 40.8%, Avg loss: 0.142370
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 38.8%, Avg loss: 0.126671
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 61.5%, Avg loss: 0.136381
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 36.7%, Avg loss: 0.124987
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 46.0%, Avg loss: 0.116534
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 51.1%, Avg loss: 0.134618
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 48.4%, Avg loss: 0.124898
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 48.2%, Avg loss: 0.123875
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 46.3%, Avg loss: 0.113431
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 34.9%, Avg loss: 0.127298
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 66.9%, Avg loss: 0.135628
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 46.1%, Avg loss: 0.114994
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 50.7%, Avg loss: 0.116715
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 36.8%, Avg loss: 0.110187
+
+Training process has finished.
+tensor([[-0.0014, -0.0001]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 720.0	Raw True Positive: 720.0
+Test Error:
+ Accuracy: 36.0%, Avg loss: 0.108801
+
+Precision: 1.0 from 720
+Recall: 0.36 from 2000
+F1: 0.5294117647058824
+Training dataset jsd_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 99.5%, Avg loss: 0.286653
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 52.0%, Avg loss: 0.153016
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 44.7%, Avg loss: 0.158245
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 65.3%, Avg loss: 0.166441
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 42.7%, Avg loss: 0.175259
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 39.4%, Avg loss: 0.181346
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 30.6%, Avg loss: 0.175032
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 54.8%, Avg loss: 0.173288
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 38.0%, Avg loss: 0.177828
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 47.8%, Avg loss: 0.178172
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 46.3%, Avg loss: 0.171710
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 36.7%, Avg loss: 0.170991
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 54.0%, Avg loss: 0.169754
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 44.1%, Avg loss: 0.168952
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 54.3%, Avg loss: 0.172720
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 57.1%, Avg loss: 0.159902
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 48.6%, Avg loss: 0.156646
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 49.6%, Avg loss: 0.160038
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 47.4%, Avg loss: 0.144568
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 41.9%, Avg loss: 0.154473
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 45.1%, Avg loss: 0.158418
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 47.7%, Avg loss: 0.151290
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 46.2%, Avg loss: 0.133642
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 39.7%, Avg loss: 0.137832
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 46.1%, Avg loss: 0.129280
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 54.0%, Avg loss: 0.127706
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 52.2%, Avg loss: 0.122331
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 43.9%, Avg loss: 0.125256
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 48.4%, Avg loss: 0.116740
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 50.8%, Avg loss: 0.114252
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 47.1%, Avg loss: 0.098742
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 45.7%, Avg loss: 0.108812
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 44.1%, Avg loss: 0.101777
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 47.9%, Avg loss: 0.102096
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 37.2%, Avg loss: 0.097740
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 47.0%, Avg loss: 0.090598
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 58.6%, Avg loss: 0.089220
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 50.9%, Avg loss: 0.085193
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 49.6%, Avg loss: 0.091082
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 53.0%, Avg loss: 0.089089
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 41.0%, Avg loss: 0.097843
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 62.8%, Avg loss: 0.082243
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 61.5%, Avg loss: 0.087917
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 51.0%, Avg loss: 0.088266
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 48.9%, Avg loss: 0.088382
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 61.0%, Avg loss: 0.084864
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 51.2%, Avg loss: 0.089284
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 62.6%, Avg loss: 0.079311
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 40.2%, Avg loss: 0.085829
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 51.4%, Avg loss: 0.077156
+
+Training process has finished.
+tensor([[0.9997, 1.0041]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1001.0	Raw True Positive: 1001.0
+Test Error:
+ Accuracy: 50.0%, Avg loss: 0.087126
+
+Precision: 1.0 from 1001
+Recall: 0.5005 from 2000
+F1: 0.6671109630123292
+Beginning training with lr 5e-05
+Training dataset test_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 45.5%, Avg loss: 0.207704
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 36.0%, Avg loss: 0.165232
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 73.4%, Avg loss: 0.153183
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 55.9%, Avg loss: 0.124792
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 46.6%, Avg loss: 0.100702
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 63.8%, Avg loss: 0.099122
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 53.8%, Avg loss: 0.108734
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 86.1%, Avg loss: 0.096918
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 66.8%, Avg loss: 0.118115
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 66.2%, Avg loss: 0.109981
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 22.5%, Avg loss: 0.097724
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 43.2%, Avg loss: 0.100128
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 25.6%, Avg loss: 0.085958
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 36.8%, Avg loss: 0.098617
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 68.0%, Avg loss: 0.083305
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 23.0%, Avg loss: 0.073194
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 25.2%, Avg loss: 0.093054
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 22.6%, Avg loss: 0.083116
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 65.5%, Avg loss: 0.101225
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 28.9%, Avg loss: 0.083036
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 30.9%, Avg loss: 0.084299
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 49.0%, Avg loss: 0.080067
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 56.4%, Avg loss: 0.089252
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 49.0%, Avg loss: 0.088366
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 62.2%, Avg loss: 0.085922
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 19.4%, Avg loss: 0.087201
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 78.3%, Avg loss: 0.071770
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 69.6%, Avg loss: 0.099686
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 66.0%, Avg loss: 0.082800
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 65.2%, Avg loss: 0.075005
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 45.8%, Avg loss: 0.079926
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 21.2%, Avg loss: 0.078768
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 17.6%, Avg loss: 0.073661
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 16.5%, Avg loss: 0.063845
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 82.6%, Avg loss: 0.086815
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 21.8%, Avg loss: 0.082653
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 16.8%, Avg loss: 0.068355
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 70.7%, Avg loss: 0.090558
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 78.7%, Avg loss: 0.085265
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 82.6%, Avg loss: 0.079914
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 49.4%, Avg loss: 0.071519
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 15.0%, Avg loss: 0.070938
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 54.4%, Avg loss: 0.070618
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 71.8%, Avg loss: 0.070892
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 20.8%, Avg loss: 0.075378
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 16.7%, Avg loss: 0.078032
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 9.0%, Avg loss: 0.074853
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 81.3%, Avg loss: 0.067145
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 15.3%, Avg loss: 0.066318
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 77.8%, Avg loss: 0.067425
+
+Training process has finished.
+tensor([[0.9982, 1.0015]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1550.0	Raw True Positive: 1550.0
+Test Error:
+ Accuracy: 77.5%, Avg loss: 0.084257
+
+Precision: 1.0 from 1550
+Recall: 0.775 from 2000
+F1: 0.8732394366197184
+Training dataset cos_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 31.4%, Avg loss: 0.205316
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 34.9%, Avg loss: 0.198130
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 66.5%, Avg loss: 0.213543
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 64.7%, Avg loss: 0.189032
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 39.2%, Avg loss: 0.168120
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 45.9%, Avg loss: 0.154794
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 38.1%, Avg loss: 0.149824
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 57.1%, Avg loss: 0.171112
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 31.5%, Avg loss: 0.145311
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 44.5%, Avg loss: 0.115417
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 36.1%, Avg loss: 0.122504
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 62.7%, Avg loss: 0.135905
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 64.6%, Avg loss: 0.109175
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 67.7%, Avg loss: 0.136464
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 75.0%, Avg loss: 0.140032
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 44.9%, Avg loss: 0.115023
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 24.6%, Avg loss: 0.122536
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 33.7%, Avg loss: 0.126425
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 24.1%, Avg loss: 0.120359
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 26.5%, Avg loss: 0.104773
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 21.7%, Avg loss: 0.081738
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 63.4%, Avg loss: 0.115470
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 46.7%, Avg loss: 0.130811
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 61.3%, Avg loss: 0.115495
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 22.6%, Avg loss: 0.143666
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 25.4%, Avg loss: 0.122508
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 42.3%, Avg loss: 0.119698
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 49.3%, Avg loss: 0.107284
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 36.1%, Avg loss: 0.136038
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 69.1%, Avg loss: 0.100170
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 40.0%, Avg loss: 0.079359
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 88.2%, Avg loss: 0.119549
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 23.7%, Avg loss: 0.113893
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 34.5%, Avg loss: 0.104795
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 64.2%, Avg loss: 0.127121
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 73.6%, Avg loss: 0.077056
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 20.7%, Avg loss: 0.093291
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 34.5%, Avg loss: 0.098403
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 13.4%, Avg loss: 0.102541
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 10.9%, Avg loss: 0.126262
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 8.1%, Avg loss: 0.105250
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 9.0%, Avg loss: 0.094214
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 67.4%, Avg loss: 0.098575
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 65.7%, Avg loss: 0.106009
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 90.3%, Avg loss: 0.101926
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 26.3%, Avg loss: 0.112996
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 82.8%, Avg loss: 0.111328
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 48.2%, Avg loss: 0.114845
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 84.1%, Avg loss: 0.129343
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 46.6%, Avg loss: 0.102383
+
+Training process has finished.
+tensor([[0.0005, 0.0010]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 908.0	Raw True Positive: 908.0
+Test Error:
+ Accuracy: 45.4%, Avg loss: 0.098952
+
+Precision: 1.0 from 908
+Recall: 0.454 from 2000
+F1: 0.624484181568088
+Training dataset jsd_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 43.0%, Avg loss: 0.167999
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 61.6%, Avg loss: 0.192496
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 69.2%, Avg loss: 0.170685
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 50.5%, Avg loss: 0.156694
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 59.7%, Avg loss: 0.141875
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 38.4%, Avg loss: 0.133011
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 75.8%, Avg loss: 0.115442
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 34.2%, Avg loss: 0.088240
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 55.3%, Avg loss: 0.087724
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 83.3%, Avg loss: 0.070765
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 78.8%, Avg loss: 0.079141
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 75.1%, Avg loss: 0.074494
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 26.6%, Avg loss: 0.073296
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 62.9%, Avg loss: 0.074577
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 51.9%, Avg loss: 0.070891
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 28.7%, Avg loss: 0.081849
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 24.6%, Avg loss: 0.073965
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 75.4%, Avg loss: 0.078485
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 37.4%, Avg loss: 0.074998
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 16.3%, Avg loss: 0.072436
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 17.6%, Avg loss: 0.078691
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 45.3%, Avg loss: 0.061514
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 42.4%, Avg loss: 0.081477
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 86.0%, Avg loss: 0.076714
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 15.4%, Avg loss: 0.083275
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 62.0%, Avg loss: 0.067013
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 16.1%, Avg loss: 0.080138
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 13.7%, Avg loss: 0.077077
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 18.0%, Avg loss: 0.070072
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 21.0%, Avg loss: 0.082915
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 24.4%, Avg loss: 0.070318
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 16.0%, Avg loss: 0.076941
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 20.1%, Avg loss: 0.076899
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 52.3%, Avg loss: 0.080339
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 77.1%, Avg loss: 0.075753
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 93.5%, Avg loss: 0.067175
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 93.3%, Avg loss: 0.061056
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 25.6%, Avg loss: 0.093598
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 16.9%, Avg loss: 0.058818
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 85.6%, Avg loss: 0.092634
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 56.9%, Avg loss: 0.070961
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 94.8%, Avg loss: 0.067883
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 17.5%, Avg loss: 0.062373
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 15.4%, Avg loss: 0.078181
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 20.5%, Avg loss: 0.075380
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 17.7%, Avg loss: 0.075498
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 6.1%, Avg loss: 0.075148
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 16.6%, Avg loss: 0.065156
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 93.9%, Avg loss: 0.075279
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 92.8%, Avg loss: 0.079406
+
+Training process has finished.
+tensor([[0.9961, 0.9981]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1837.0	Raw True Positive: 1837.0
+Test Error:
+ Accuracy: 91.8%, Avg loss: 0.090294
+
+Precision: 1.0 from 1837
+Recall: 0.9185 from 2000
+F1: 0.9575188949700287
+Beginning training with lr 0.0001
+Training dataset test_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 36.7%, Avg loss: 0.195931
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 42.0%, Avg loss: 0.154331
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 53.0%, Avg loss: 0.100400
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 39.1%, Avg loss: 0.114860
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 73.4%, Avg loss: 0.090558
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 17.1%, Avg loss: 0.106829
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 69.7%, Avg loss: 0.082765
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 74.0%, Avg loss: 0.091216
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 84.8%, Avg loss: 0.115560
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 76.3%, Avg loss: 0.124463
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 80.6%, Avg loss: 0.090775
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 20.7%, Avg loss: 0.073318
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 35.5%, Avg loss: 0.079076
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 12.9%, Avg loss: 0.100693
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 79.5%, Avg loss: 0.084012
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 86.4%, Avg loss: 0.066440
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 45.6%, Avg loss: 0.095861
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 31.0%, Avg loss: 0.081884
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 97.1%, Avg loss: 0.080954
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 95.0%, Avg loss: 0.072925
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 14.2%, Avg loss: 0.081254
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 58.6%, Avg loss: 0.074465
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 12.6%, Avg loss: 0.083160
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 21.9%, Avg loss: 0.080943
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 90.1%, Avg loss: 0.070767
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 68.9%, Avg loss: 0.086868
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 15.6%, Avg loss: 0.072204
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 96.7%, Avg loss: 0.080973
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 84.2%, Avg loss: 0.076154
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 92.9%, Avg loss: 0.076724
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 59.0%, Avg loss: 0.091274
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 87.9%, Avg loss: 0.076922
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 93.8%, Avg loss: 0.066032
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 8.0%, Avg loss: 0.077228
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 89.9%, Avg loss: 0.073966
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 95.3%, Avg loss: 0.073938
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 80.0%, Avg loss: 0.067960
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 89.5%, Avg loss: 0.072977
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 16.1%, Avg loss: 0.060130
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 91.9%, Avg loss: 0.065996
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 46.7%, Avg loss: 0.092400
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 74.9%, Avg loss: 0.076115
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 2.4%, Avg loss: 0.065584
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 7.7%, Avg loss: 0.072857
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 82.6%, Avg loss: 0.087417
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 42.6%, Avg loss: 0.066283
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 47.4%, Avg loss: 0.066177
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 95.0%, Avg loss: 0.059902
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 14.3%, Avg loss: 0.071446
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 91.5%, Avg loss: 0.064422
+
+Training process has finished.
+tensor([[0.9927, 0.9946]])
+tensor([[1]])
+tensor([1])
+Raw Recall: 1824.0	Raw True Positive: 1824.0
+Test Error:
+ Accuracy: 91.2%, Avg loss: 0.079257
+
+Precision: 1.0 from 1824
+Recall: 0.912 from 2000
+F1: 0.9539748953974896
+Training dataset cos_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 29.2%, Avg loss: 0.177550
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 52.4%, Avg loss: 0.176498
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 51.3%, Avg loss: 0.182859
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 42.2%, Avg loss: 0.153681
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 64.7%, Avg loss: 0.134962
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 52.9%, Avg loss: 0.118736
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 82.8%, Avg loss: 0.122602
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 40.6%, Avg loss: 0.128690
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 25.6%, Avg loss: 0.154264
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 89.4%, Avg loss: 0.074956
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 28.5%, Avg loss: 0.124041
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 39.3%, Avg loss: 0.103182
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 39.5%, Avg loss: 0.155508
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 70.7%, Avg loss: 0.081852
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 68.4%, Avg loss: 0.097188
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 30.0%, Avg loss: 0.088377
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 17.5%, Avg loss: 0.096956
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 90.1%, Avg loss: 0.088517
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 63.7%, Avg loss: 0.094793
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 96.9%, Avg loss: 0.109624
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 78.7%, Avg loss: 0.116858
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 25.3%, Avg loss: 0.105142
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 29.8%, Avg loss: 0.096485
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 18.5%, Avg loss: 0.093011
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 89.2%, Avg loss: 0.080502
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 37.4%, Avg loss: 0.077670
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 21.1%, Avg loss: 0.112975
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 81.6%, Avg loss: 0.141762
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 69.3%, Avg loss: 0.113328
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 88.5%, Avg loss: 0.100517
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 36.2%, Avg loss: 0.094163
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 92.7%, Avg loss: 0.125425
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 44.1%, Avg loss: 0.106151
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 76.4%, Avg loss: 0.111881
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 24.9%, Avg loss: 0.117955
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 16.2%, Avg loss: 0.095285
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 88.9%, Avg loss: 0.105475
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 79.5%, Avg loss: 0.116734
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 29.0%, Avg loss: 0.094176
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 55.9%, Avg loss: 0.082838
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 34.2%, Avg loss: 0.104514
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 78.8%, Avg loss: 0.067755
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 88.0%, Avg loss: 0.098846
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 62.3%, Avg loss: 0.093691
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 89.8%, Avg loss: 0.116924
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 23.7%, Avg loss: 0.107184
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 16.0%, Avg loss: 0.080419
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 80.1%, Avg loss: 0.087938
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 6.0%, Avg loss: 0.104497
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 20.8%, Avg loss: 0.101088
+
+Training process has finished.
+tensor([[ 0.0007, -0.0002]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 448.0	Raw True Positive: 448.0
+Test Error:
+ Accuracy: 22.4%, Avg loss: 0.096527
+
+Precision: 1.0 from 448
+Recall: 0.224 from 2000
+F1: 0.36601307189542487
+Training dataset jsd_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 67.3%, Avg loss: 0.149045
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 17.3%, Avg loss: 0.146743
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 46.2%, Avg loss: 0.124647
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 42.9%, Avg loss: 0.100692
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 37.6%, Avg loss: 0.115897
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 34.9%, Avg loss: 0.097900
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 28.6%, Avg loss: 0.116451
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 20.7%, Avg loss: 0.087491
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 39.4%, Avg loss: 0.084696
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 87.6%, Avg loss: 0.080288
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 72.9%, Avg loss: 0.074369
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 34.4%, Avg loss: 0.059406
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 85.5%, Avg loss: 0.071599
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 12.8%, Avg loss: 0.065060
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 60.8%, Avg loss: 0.100091
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 35.6%, Avg loss: 0.072104
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 81.0%, Avg loss: 0.053399
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 24.6%, Avg loss: 0.073059
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 22.1%, Avg loss: 0.080313
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 31.2%, Avg loss: 0.056190
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 29.5%, Avg loss: 0.070077
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 79.1%, Avg loss: 0.079159
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 45.8%, Avg loss: 0.073521
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 20.9%, Avg loss: 0.070830
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 66.9%, Avg loss: 0.063283
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 45.4%, Avg loss: 0.061542
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 82.9%, Avg loss: 0.048036
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 20.6%, Avg loss: 0.084071
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 14.0%, Avg loss: 0.061920
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 78.5%, Avg loss: 0.068734
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 94.4%, Avg loss: 0.082172
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 25.7%, Avg loss: 0.066743
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 66.9%, Avg loss: 0.071202
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 74.0%, Avg loss: 0.092368
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 64.4%, Avg loss: 0.071049
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 14.1%, Avg loss: 0.080222
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 33.4%, Avg loss: 0.070969
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 73.1%, Avg loss: 0.075618
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 31.3%, Avg loss: 0.083758
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 72.4%, Avg loss: 0.063220
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 70.2%, Avg loss: 0.075393
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 6.3%, Avg loss: 0.068829
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 83.9%, Avg loss: 0.064248
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 29.2%, Avg loss: 0.085453
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 83.7%, Avg loss: 0.073728
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 90.3%, Avg loss: 0.066930
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 22.4%, Avg loss: 0.077310
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 33.4%, Avg loss: 0.064821
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 11.2%, Avg loss: 0.071555
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 50.9%, Avg loss: 0.085275
+
+Training process has finished.
+tensor([[0.9979, 0.9973]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 1025.0	Raw True Positive: 1025.0
+Test Error:
+ Accuracy: 51.2%, Avg loss: 0.096343
+
+Precision: 1.0 from 1025
+Recall: 0.5125 from 2000
+F1: 0.6776859504132231
+Beginning training with lr 0.0005
+Training dataset test_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 78.9%, Avg loss: 0.154836
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 85.6%, Avg loss: 0.112208
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 71.3%, Avg loss: 0.119031
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 58.8%, Avg loss: 0.085530
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 96.3%, Avg loss: 0.124779
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 74.4%, Avg loss: 0.078072
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 11.5%, Avg loss: 0.085852
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 95.2%, Avg loss: 0.103087
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 76.5%, Avg loss: 0.068861
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 65.7%, Avg loss: 0.060424
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 44.2%, Avg loss: 0.068729
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 82.3%, Avg loss: 0.090479
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 5.8%, Avg loss: 0.076499
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 17.4%, Avg loss: 0.101807
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 87.2%, Avg loss: 0.059876
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 71.2%, Avg loss: 0.079595
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 1.6%, Avg loss: 0.080510
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 49.1%, Avg loss: 0.089326
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 83.1%, Avg loss: 0.062418
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 95.2%, Avg loss: 0.083746
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 99.4%, Avg loss: 0.055869
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 6.3%, Avg loss: 0.074567
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 97.6%, Avg loss: 0.078873
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 98.8%, Avg loss: 0.069064
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 95.1%, Avg loss: 0.058935
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 3.2%, Avg loss: 0.089279
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 97.1%, Avg loss: 0.076927
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 2.4%, Avg loss: 0.049846
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 99.5%, Avg loss: 0.061905
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 84.4%, Avg loss: 0.076085
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 99.6%, Avg loss: 0.071771
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 97.7%, Avg loss: 0.097077
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 1.8%, Avg loss: 0.062491
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 100.0%, Avg loss: 0.095974
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 3.4%, Avg loss: 0.059689
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 2.9%, Avg loss: 0.085774
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 99.7%, Avg loss: 0.131523
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 95.0%, Avg loss: 0.056335
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 93.1%, Avg loss: 0.068907
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 90.4%, Avg loss: 0.090022
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 0.9%, Avg loss: 0.059815
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 92.4%, Avg loss: 0.081587
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 0.6%, Avg loss: 0.073369
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 2.0%, Avg loss: 0.093183
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 100.0%, Avg loss: 0.062167
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 100.1%, Avg loss: 0.066667
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 0.3%, Avg loss: 0.060376
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 7.7%, Avg loss: 0.084447
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 0.6%, Avg loss: 0.124460
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 0.2%, Avg loss: 0.069437
+
+Training process has finished.
+tensor([[1.0014, 1.0006]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 2.0	Raw True Positive: 2.0
+Test Error:
+ Accuracy: 0.1%, Avg loss: 0.090696
+
+Precision: 1.0 from 2
+Recall: 0.001 from 2000
+F1: 0.0019980019980019984
+Training dataset cos_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 79.0%, Avg loss: 0.164917
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 1.4%, Avg loss: 0.062147
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 78.3%, Avg loss: 0.131817
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 99.2%, Avg loss: 0.144143
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 78.4%, Avg loss: 0.128880
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 34.8%, Avg loss: 0.088187
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 26.8%, Avg loss: 0.135064
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 0.2%, Avg loss: 0.095553
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 83.1%, Avg loss: 0.073569
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 92.2%, Avg loss: 0.083344
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 59.4%, Avg loss: 0.088152
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 12.6%, Avg loss: 0.088738
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 5.1%, Avg loss: 0.037194
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 91.8%, Avg loss: 0.093952
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 24.0%, Avg loss: 0.088010
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 94.9%, Avg loss: 0.125566
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 5.0%, Avg loss: 0.092899
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 88.7%, Avg loss: 0.160938
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 9.1%, Avg loss: 0.123686
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 98.6%, Avg loss: 0.119475
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 94.1%, Avg loss: 0.120593
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 99.4%, Avg loss: 0.129055
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 11.1%, Avg loss: 0.125913
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 89.6%, Avg loss: 0.095553
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 12.7%, Avg loss: 0.117058
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 92.4%, Avg loss: 0.095744
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 99.6%, Avg loss: 0.092389
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 3.1%, Avg loss: 0.150338
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 98.6%, Avg loss: 0.077846
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 8.5%, Avg loss: 0.132919
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 98.7%, Avg loss: 0.062814
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 7.1%, Avg loss: 0.107013
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 11.6%, Avg loss: 0.090018
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 5.4%, Avg loss: 0.056785
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 98.3%, Avg loss: 0.068386
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 11.4%, Avg loss: 0.101057
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 95.7%, Avg loss: 0.060725
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 56.2%, Avg loss: 0.079984
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 1.6%, Avg loss: 0.096038
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 91.8%, Avg loss: 0.119351
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 90.8%, Avg loss: 0.124099
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 10.5%, Avg loss: 0.088204
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 92.2%, Avg loss: 0.069339
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 90.3%, Avg loss: 0.116528
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 98.1%, Avg loss: 0.119552
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 90.7%, Avg loss: 0.155105
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 98.0%, Avg loss: 0.046339
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 9.2%, Avg loss: 0.133174
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 89.7%, Avg loss: 0.121444
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 91.2%, Avg loss: 0.089250
+
+Training process has finished.
+tensor([[0.0005, 0.0002]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 1825.0	Raw True Positive: 1825.0
+Test Error:
+ Accuracy: 91.2%, Avg loss: 0.084256
+
+Precision: 1.0 from 1825
+Recall: 0.9125 from 2000
+F1: 0.9542483660130718
+Training dataset jsd_scores
+Starting epoch 1
+Dev Error:
+ Accuracy: 45.6%, Avg loss: 0.129043
+
+Starting epoch 2
+Dev Error:
+ Accuracy: 34.8%, Avg loss: 0.096902
+
+Starting epoch 3
+Dev Error:
+ Accuracy: 6.8%, Avg loss: 0.105249
+
+Starting epoch 4
+Dev Error:
+ Accuracy: 97.5%, Avg loss: 0.122109
+
+Starting epoch 5
+Dev Error:
+ Accuracy: 53.7%, Avg loss: 0.048366
+
+Starting epoch 6
+Dev Error:
+ Accuracy: 1.9%, Avg loss: 0.075940
+
+Starting epoch 7
+Dev Error:
+ Accuracy: 7.0%, Avg loss: 0.081184
+
+Starting epoch 8
+Dev Error:
+ Accuracy: 10.5%, Avg loss: 0.093045
+
+Starting epoch 9
+Dev Error:
+ Accuracy: 78.2%, Avg loss: 0.084129
+
+Starting epoch 10
+Dev Error:
+ Accuracy: 9.0%, Avg loss: 0.048338
+
+Starting epoch 11
+Dev Error:
+ Accuracy: 61.4%, Avg loss: 0.068119
+
+Starting epoch 12
+Dev Error:
+ Accuracy: 63.5%, Avg loss: 0.104620
+
+Starting epoch 13
+Dev Error:
+ Accuracy: 29.8%, Avg loss: 0.066369
+
+Starting epoch 14
+Dev Error:
+ Accuracy: 9.7%, Avg loss: 0.074301
+
+Starting epoch 15
+Dev Error:
+ Accuracy: 1.3%, Avg loss: 0.106578
+
+Starting epoch 16
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.055978
+
+Starting epoch 17
+Dev Error:
+ Accuracy: 0.3%, Avg loss: 0.085139
+
+Starting epoch 18
+Dev Error:
+ Accuracy: 95.9%, Avg loss: 0.077574
+
+Starting epoch 19
+Dev Error:
+ Accuracy: 3.0%, Avg loss: 0.056925
+
+Starting epoch 20
+Dev Error:
+ Accuracy: 3.2%, Avg loss: 0.042258
+
+Starting epoch 21
+Dev Error:
+ Accuracy: 88.4%, Avg loss: 0.059321
+
+Starting epoch 22
+Dev Error:
+ Accuracy: 86.1%, Avg loss: 0.061547
+
+Starting epoch 23
+Dev Error:
+ Accuracy: 96.0%, Avg loss: 0.049006
+
+Starting epoch 24
+Dev Error:
+ Accuracy: 99.1%, Avg loss: 0.064037
+
+Starting epoch 25
+Dev Error:
+ Accuracy: 100.0%, Avg loss: 0.055618
+
+Starting epoch 26
+Dev Error:
+ Accuracy: 98.9%, Avg loss: 0.085093
+
+Starting epoch 27
+Dev Error:
+ Accuracy: 2.2%, Avg loss: 0.083543
+
+Starting epoch 28
+Dev Error:
+ Accuracy: 1.5%, Avg loss: 0.058536
+
+Starting epoch 29
+Dev Error:
+ Accuracy: 98.6%, Avg loss: 0.070849
+
+Starting epoch 30
+Dev Error:
+ Accuracy: 99.2%, Avg loss: 0.070233
+
+Starting epoch 31
+Dev Error:
+ Accuracy: 5.4%, Avg loss: 0.049771
+
+Starting epoch 32
+Dev Error:
+ Accuracy: 99.6%, Avg loss: 0.057822
+
+Starting epoch 33
+Dev Error:
+ Accuracy: 86.4%, Avg loss: 0.132071
+
+Starting epoch 34
+Dev Error:
+ Accuracy: 98.7%, Avg loss: 0.060139
+
+Starting epoch 35
+Dev Error:
+ Accuracy: 98.1%, Avg loss: 0.091881
+
+Starting epoch 36
+Dev Error:
+ Accuracy: 85.3%, Avg loss: 0.046730
+
+Starting epoch 37
+Dev Error:
+ Accuracy: 0.3%, Avg loss: 0.069619
+
+Starting epoch 38
+Dev Error:
+ Accuracy: 98.0%, Avg loss: 0.081200
+
+Starting epoch 39
+Dev Error:
+ Accuracy: 73.4%, Avg loss: 0.100347
+
+Starting epoch 40
+Dev Error:
+ Accuracy: 0.3%, Avg loss: 0.057998
+
+Starting epoch 41
+Dev Error:
+ Accuracy: 0.2%, Avg loss: 0.086454
+
+Starting epoch 42
+Dev Error:
+ Accuracy: 0.3%, Avg loss: 0.051534
+
+Starting epoch 43
+Dev Error:
+ Accuracy: 1.0%, Avg loss: 0.082571
+
+Starting epoch 44
+Dev Error:
+ Accuracy: 99.6%, Avg loss: 0.064562
+
+Starting epoch 45
+Dev Error:
+ Accuracy: 80.6%, Avg loss: 0.084861
+
+Starting epoch 46
+Dev Error:
+ Accuracy: 98.4%, Avg loss: 0.083962
+
+Starting epoch 47
+Dev Error:
+ Accuracy: 5.7%, Avg loss: 0.045391
+
+Starting epoch 48
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.061758
+
+Starting epoch 49
+Dev Error:
+ Accuracy: 99.1%, Avg loss: 0.099490
+
+Starting epoch 50
+Dev Error:
+ Accuracy: 0.1%, Avg loss: 0.061782
+
+Training process has finished.
+tensor([[1.0002, 0.9995]])
+tensor([[1]])
+tensor([0])
+Raw Recall: 0.0	Raw True Positive: 0
+Traceback (most recent call last):
+  File "/home/nils/workspace/speech_correction/omnilingo-pronunciation/mlp_diff.py", line 153, in <module>
+    true_positive /= pos_pred
+ZeroDivisionError: division by zero
+
+Process finished with exit code 1
