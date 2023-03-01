@@ -20,32 +20,32 @@ with open('../STT/data/en/sampled_duplicates.tsv', newline='') as validated:
         duplicates[row[1]] = row
 
 
-results_files = list(glob.glob('../STT/data/en/results/*'))
-valid_files = []
-valid_downvoted = []
-valid_upvoted = []
-for f in results_files:
-    gold, test = f.split('/')[-1].split('.mp3.')[:2]
-    # verify files are in duplicates and skip files where gold has downvotes
-    if gold+'.mp3' in duplicates and test+'.mp3' in duplicates and int(duplicates[gold+'.mp3'][4]) == 0:
-        valid_files.append(f)
-        if int(duplicates[test+'.mp3'][4]) > 0:
-            valid_downvoted.append(f)
-        else:
-            valid_upvoted.append(f)
-    else:
-        continue # common_voice_en_17270482.mp3 doesn't show up the map
-# data_files = random.sample(valid_files, 20000)
-data_files = random.sample(valid_downvoted, 10000) + random.sample(valid_upvoted, 10000)
-
-with open("balanced_sample.pickle", 'wb') as p:
-    pickle.dump(data_files, p)
+# results_files = list(glob.glob('../STT/data/en/results/*'))
+# valid_files = []
+# valid_downvoted = []
+# valid_upvoted = []
+# for f in results_files:
+#     gold, test = f.split('/')[-1].split('.mp3.')[:2]
+#     # verify files are in duplicates and skip files where gold has downvotes
+#     if gold+'.mp3' in duplicates and test+'.mp3' in duplicates and int(duplicates[gold+'.mp3'][4]) == 0:
+#         valid_files.append(f)
+#         if int(duplicates[test+'.mp3'][4]) > 0:
+#             valid_downvoted.append(f)
+#         else:
+#             valid_upvoted.append(f)
+#     else:
+#         continue # common_voice_en_17270482.mp3 doesn't show up the map
+# # data_files = random.sample(valid_files, 20000)
+# data_files = random.sample(valid_downvoted, 10000) + random.sample(valid_upvoted, 10000)
+#
+# with open("balanced_sample.pickle", 'wb') as p:
+#     pickle.dump(data_files, p)
 
 
 # this way I get the same sample every time (and don't have to rerun the sampling
-# p = open('balanced_sample.pickle', 'rb')
-# data_files = pickle.load(p)
-# p.close()
+p = open('balanced_sample.pickle', 'rb')
+data_files = pickle.load(p)
+p.close()
 
 gold_scores = []
 test_scores = []

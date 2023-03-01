@@ -5,14 +5,14 @@ from collections import Counter
 
 # hyperparams = [(5e-6, 10), (1e-6, 10), (5e-5, 10), (1e-5, 10), (5e-4, 10), (1e-4, 10),
 #                (5e-6, 50), (1e-6, 50), (5e-5, 50), (1e-5, 50), (5e-4, 50), (1e-4, 50)]
-hyperparams = [[5e-5, 1e-6], [5e-5, 1e-7], [5e-5, 1e-8], [5e-5, 1e-9],
-               [1e-4, 1e-6], [1e-4, 1e-7], [1e-4, 1e-8], [1e-4, 1e-9],
-               [5e-4, 1e-6], [5e-4, 1e-7], [5e-4, 1e-8], [5e-4, 1e-9],
-               [1e-3, 1e-6], [1e-3, 1e-7], [1e-3, 1e-8], [1e-3, 1e-9]]
-# hyperparams = [1e-4]
+# hyperparams = [[5e-5, 1e-6], [5e-5, 1e-7], [5e-5, 1e-8], [5e-5, 1e-9],
+#                [1e-4, 1e-6], [1e-4, 1e-7], [1e-4, 1e-8], [1e-4, 1e-9],
+#                [5e-4, 1e-6], [5e-4, 1e-7], [5e-4, 1e-8], [5e-4, 1e-9],
+#                [1e-3, 1e-6], [1e-3, 1e-7], [1e-3, 1e-8], [1e-3, 1e-9]]
+hyperparams = [[5e-4, 0.80]]
 # hyperparams = [[1e-3, 0.90], [1e-3, 0.85], [1e-3, 0.80], [1e-3, 0.75], [1e-3, 0.7]]
-               # [5e-4, 0.80], [5e-4, 0.75], [5e-4, 0.7],
-               # [5e-3, 0.80], [5e-3, 0.75], [5e-3, 0.7]]
+#                [5e-4, 0.80], [5e-4, 0.75], [5e-4, 0.7],
+#                [5e-3, 0.80], [5e-3, 0.75], [5e-3, 0.7]]
 
 max_score_len = 152 # retrieved from dists.txt
 
@@ -38,18 +38,21 @@ jsd_file.close()
 # jsd_scores = pickle.load(jsd_file)
 # jsd_file.close()
 
-for lr, epsilon in hyperparams:
-    print(f"Beginning training with lr {lr} and epsilon {epsilon}")
+all_predictions = []
+
+for lr, beta in hyperparams:
+    print(f"Beginning training with lr {lr} and beta {beta}")
     for n, dataset in [('test_scores', test_scores), ('cos_scores', cos_scores), ('jsd_scores', jsd_scores)]:
         print(f"Training dataset {n}")
         X_train, X_test, y_train, y_test = train_test_split(dataset[0], dataset[1], random_state = 47404)
 
-        mlp = MLPClassifier(hidden_layer_sizes=(128, 64, 32), random_state=42, max_iter=1000, learning_rate_init = lr, epsilon = epsilon).fit(X_train, y_train)
+        mlp = MLPClassifier(hidden_layer_sizes=(128, 64, 32), random_state=42, max_iter=1000, learning_rate_init = lr, beta_1 = beta).fit(X_train, y_train)
         # print(mlp.predict(X_test[:10]))
         # print(y_test[:10])
         # print(mlp.score(X_test, y_test))
         print(mlp.loss_curve_)
         predictions = mlp.predict(X_test)
+        all_predictions.append([X_test, predictions, y_test])
         print(Counter(predictions))
         tp = 0
         fp = 0
@@ -68,3 +71,6 @@ for lr, epsilon in hyperparams:
                     fn += 1
         print("Score: {}".format((tp+tn)/(tp+tn+fp+fn)))
         print("p           truth      \nr      |-true-|-false-|\ne true | {} | {}   |\nd false| {}  | {}  |".format(tp, fp, fn, tn))
+
+with open('sk_predictions.binary', 'wb') as out_file:
+    pickle.dump(all_predictions, out_file)
