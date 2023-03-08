@@ -2,6 +2,11 @@
 // const { kldivergence  } = require('mathjs')
 // const math = import('./math.js');
 
+// this is how you do sums for some reason
+function sum(x) {
+    return x.reduce((partialSum, a) => partialSum + a, 0);
+}
+
 function cosinesim(x, y){
     var dotproduct=0;
     var mx=0;
@@ -26,6 +31,14 @@ function jensen_shannon (x, y) {
         m[i] = (x[i] + y[i]) / 2;
     }
     return (math.kldivergence(x, m) + math.kldivergence(y, m)) / 2;
+}
+
+function x_entropy (x, y) {
+    let s = []
+    for(let i = 0; i < x.length; i++) {
+        s[i] = x[i] * Math.log2(y[i])
+    }
+    return -1 * sum(s)
 }
 
 function default_scorer (x, y) {

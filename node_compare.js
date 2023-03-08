@@ -1,6 +1,11 @@
 // import {kldivergence} from 'mathjs'
-const { kldivergence  } = require('mathjs')
+// const { kldivergence, sum } = require('mathjs')
 // const math = import('./math');
+
+// this is how you do sums for some reason
+function sum(x) {
+    return x.reduce((partialSum, a) => partialSum + a, 0);
+}
 
 function cosinesim(x, y){
     var dotproduct=0;
@@ -16,6 +21,14 @@ function cosinesim(x, y){
     return (dotproduct)/((mx)*(my));
 }
 
+function _kld (x, y) {
+    let result = []
+    for (let i = 0; i < x.length; i++) {
+        result[i] = x[i] * (Math.log2(x[i]/y[i]))
+    }
+    return sum(result)
+}
+
 // https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence
 function jensen_shannon (x, y) {
     if(x.length !== y.length) {
@@ -25,7 +38,15 @@ function jensen_shannon (x, y) {
     for(let i = 0; i < x.length; i++){
         m[i] = (x[i] + y[i]) / 2;
     }
-    return (kldivergence(x, m) + kldivergence(y, m)) / 2;
+    return (_kld(x, m) + _kld(y, m)) / 2;
+}
+
+function x_entropy (x, y) {
+    let s = []
+    for(let i = 0; i < x.length; i++) {
+        s[i] = x[i] * Math.log2(y[i])
+    }
+    return -1 * sum(s)
 }
 
 function default_scorer (x, y) {
@@ -102,4 +123,4 @@ function needleman_wunsch_align(x, y, scorer = default_scorer) {
     return alignment
 }
 
-module.exports = {cosinesim, needleman_wunsch_align, jensen_shannon}
+module.exports = {cosinesim, needleman_wunsch_align, jensen_shannon, x_entropy, _kld}

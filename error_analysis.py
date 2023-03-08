@@ -2,7 +2,7 @@ import pickle
 from collections import Counter
 import matplotlib.pyplot as plt
 
-sensitivity = 0.1
+sensitivity = 0.05
 
 with open('sk_predictions.binary', 'rb') as in_file:
     predictions = pickle.load(in_file)
@@ -160,5 +160,12 @@ labels = ['Both Wrong\nAnswer 0', 'Both Wrong\nAnswer 1', 'Both Right\nAnswer 0'
 ax2.violinplot([deltas_bw_0, deltas_bw_1, deltas_br_0, deltas_br_1], widths=0.9, showmeans=True, showextrema=False)
 ax2.set_xticks(list(range(1, len(labels)+1)))
 ax2.set_xticklabels(labels)
+plt.show()
+
+fig3, ax3 = plt.subplots()
+labels = ['Answer 0', 'Answer 1']
+ax3.violinplot([deltas_bw_0, deltas_bw_1, deltas_br_0, deltas_br_1], widths=0.9, showmeans=True, showextrema=False)
+ax3.set_xticks(list(range(1, len(labels)+1)))
+ax3.set_xticklabels(labels)
 plt.show()
 pass

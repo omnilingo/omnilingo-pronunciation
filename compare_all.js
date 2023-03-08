@@ -1,5 +1,5 @@
 var fs = require('fs')
-var {cosinesim, needleman_wunsch_align, jensen_shannon} = require('./node_compare')
+var {cosinesim, needleman_wunsch_align, jensen_shannon, x_entropy} = require('./node_compare')
 
 function get_logit_chars(logits, alphabet) {
     let logit_chars = [];
@@ -228,36 +228,49 @@ async function run_compare() {
 
             let best_cos_print = []
             // naively insert cosine sim
-            for (let i = 0; i < best_golds.length; i++) {
-                // let new_cell = cosine_row.insertCell();
-                let cos = cosinesim(best_golds[i], best_tests[i]);
-                // let best_fixed = [];
-                // let test_fixed = [];
-                // for (let j = 0; j < best_golds[i].length; j++) {
-                //     best_fixed.push(best_golds[i][j].toFixed(20));
-                //     test_fixed.push(best_tests[i][j].toFixed(20));
-                // }
-                // console.log('Gold at ' + i + ': ' + best_fixed);
-                // // console.log(best_golds[i]);
-                // console.log('Test at ' + i + ': ' + test_fixed);
-                // // console.log(best_tests[i]);
-                // console.log('cos at ' + i + ': ' + cos);
-                best_cos_print[i] = cos.toFixed(3);
-                // new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max((.6 - cos), 0) + ")"
-            }
+            // for (let i = 0; i < best_golds.length; i++) {
+            //     // let new_cell = cosine_row.insertCell();
+            //     let cos = cosinesim(best_golds[i], best_tests[i]);
+            //     // let best_fixed = [];
+            //     // let test_fixed = [];
+            //     // for (let j = 0; j < best_golds[i].length; j++) {
+            //     //     best_fixed.push(best_golds[i][j].toFixed(20));
+            //     //     test_fixed.push(best_tests[i][j].toFixed(20));
+            //     // }
+            //     // console.log('Gold at ' + i + ': ' + best_fixed);
+            //     // // console.log(best_golds[i]);
+            //     // console.log('Test at ' + i + ': ' + test_fixed);
+            //     // // console.log(best_tests[i]);
+            //     // console.log('cos at ' + i + ': ' + cos);
+            //     best_cos_print[i] = cos.toFixed(3);
+            //     // new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max((.6 - cos), 0) + ")"
+            // }
 
             let best_jsd_print = []
-            // naively insert Jensen-Shannon
+            // // naively insert Jensen-Shannon
+            // for (let i = 0; i < best_golds.length; i++) {
+            //     // let new_cell = js_row.insertCell();
+            //     let jsd = jensen_shannon(best_golds[i], best_tests[i]);
+            //     best_jsd_print[i] = (1 - jsd).toFixed(3);
+            //     // new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max((.6 - (1 - jsd)), 0) + ")"
+            // }
+
+            let best_xen_print = []
+            // naively insert Cross Entropy
             for (let i = 0; i < best_golds.length; i++) {
                 // let new_cell = js_row.insertCell();
+                let cos = cosinesim(best_golds[i], best_tests[i]);
                 let jsd = jensen_shannon(best_golds[i], best_tests[i]);
+                let xen = x_entropy(best_golds[i], best_tests[i]);
+                best_cos_print[i] = cos.toFixed(3);
                 best_jsd_print[i] = (1 - jsd).toFixed(3);
+                best_xen_print[i] = (1 - xen).toFixed(3);
                 // new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max((.6 - (1 - jsd)), 0) + ")"
             }
 
             // print results to file
             let print_text = best_golds_print.join(',') + '\n' + best_tests_print.join(',') + '\n' +
-                best_cos_print.join(',') + '\n' + best_jsd_print.join(',');
+                best_cos_print.join(',') + '\n' + best_jsd_print.join(',') + '\n' + best_xen_print.join(',');
             let new_file = tsv[row_i][1] + '.' + tsv[row_j][1];
             console.log("writing to " + new_file);
             fs.writeFileSync('../STT/data/en/results/' + new_file + '.txt', print_text);
