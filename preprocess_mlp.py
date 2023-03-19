@@ -51,6 +51,7 @@ gold_scores = []
 test_scores = []
 cos_scores = []
 jsd_scores = []
+xen_scores = []
 max_score_len = 0
 downvotes = Counter()
 gold_downvotes = Counter()
@@ -58,12 +59,15 @@ gold_scores_counter = Counter()
 test_scores_counter = Counter()
 cos_scores_counter = Counter()
 jsd_scores_counter = Counter()
+xen_scores_counter = Counter()
 test_up_scores_counter = Counter()
 cos_up_scores_counter = Counter()
 jsd_up_scores_counter = Counter()
+xen_up_scores_counter = Counter()
 test_down_scores_counter = Counter()
 cos_down_scores_counter = Counter()
 jsd_down_scores_counter = Counter()
+xen_down_scores_counter = Counter()
 
 for pair in data_files:
     gold, test = pair.split('/')[-1].split('.mp3.')[:2]
@@ -99,6 +103,14 @@ for pair in data_files:
         else:
             jsd_up_scores_counter.update(jsd_score)
 
+        xen_score = [float(x) for x in in_file.readline().split(',')]
+        xen_scores.append([xen_score, int(duplicates[test+'.mp3'][4])])
+        xen_scores_counter.update(xen_score)
+        if int(duplicates[test+'.mp3'][4]) > 0:
+            xen_down_scores_counter.update(xen_score)
+        else:
+            xen_up_scores_counter.update(xen_score)
+
 
 # saving the distributions and data to a file so I can access them again later
 with open("results/balanced_dists_sk.txt", 'w') as out_file:
@@ -109,14 +121,17 @@ with open("results/balanced_dists_sk.txt", 'w') as out_file:
     print("Test Scores Dist: " + str(test_scores_counter), file = out_file)
     print("Cos Scores Dist: " + str(cos_scores_counter), file = out_file)
     print("JSD Scores Dist: " + str(jsd_scores_counter), file = out_file)
+    print("XEN Scores Dist: " + str(xen_scores_counter), file = out_file)
     # print("All Scores Dist: " + str(gold_scores_counter + test_scores_counter +
     #                                 cos_scores_counter + jsd_scores_counter), file = out_file)
     print("Test no downvotes: " + str(test_up_scores_counter), file = out_file)
-    print("Test with downvotes: " + str(test_down_scores_counter), file = out_file)
     print("Cos no downvotes: " + str(cos_up_scores_counter), file = out_file)
-    print("Cos with downvotes: " + str(cos_down_scores_counter), file = out_file)
     print("JSD no downvotes: " + str(jsd_up_scores_counter), file = out_file)
+    print("XEN no downvotes: " + str(xen_up_scores_counter), file = out_file)
+    print("Test with downvotes: " + str(test_down_scores_counter), file = out_file)
+    print("Cos with downvotes: " + str(cos_down_scores_counter), file = out_file)
     print("JSD with downvotes: " + str(jsd_down_scores_counter), file = out_file)
+    print("XEN with downvotes: " + str(xen_down_scores_counter), file = out_file)
 
 
 # max_downvotes = max(set(downvotes))
@@ -156,3 +171,6 @@ with open('sk_cos_sample.pickle', 'wb') as out_file:
 jsd_scores = normalize_list_len(jsd_scores, max_score_len)
 with open('sk_jsd_sample.pickle', 'wb') as out_file:
     pickle.dump(jsd_scores, out_file)
+xen_scores = normalize_list_len(xen_scores, max_score_len)
+with open('sk_xen_sample.pickle', 'wb') as out_file:
+    pickle.dump(xen_scores, out_file)
