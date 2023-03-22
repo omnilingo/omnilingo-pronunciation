@@ -194,7 +194,7 @@ ax3.set_title("Cross Entropy")
 # ax0.ylabel('Count (log scale)')
 # ax0.ylim(100, 1000000)
 # ax0.yscale('log')
-ax3.hist(list(xen_scores.elements()), 30, color = '#990000')
+ax3.hist(list(xen_scores.elements()), 10, color = '#990000')
 # plt.show()
 
 fig.tight_layout()
