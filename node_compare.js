@@ -49,6 +49,30 @@ function x_entropy (x, y) {
     return -1 * sum(s)
 }
 
+// Translated and fixed from https://stackoverflow.com/questions/45741850/python-hellinger-formula-explanation
+// def hellinger(p, q):
+//     list_of_squares = []
+//     for p_i, q_i in zip(p, q):
+//         # calculate the square of the difference of ith distribution elements
+//         s = (math.sqrt(p_i) - math.sqrt(q_i)) ** 2
+//
+//         # append
+//         list_of_squares.append(s)
+//
+//     # calculate sum of squares
+//     sosq = sum(list_of_squares)
+//
+//     return sosq / math.sqrt(2)
+function hellinger (p, q) {
+    let squares = [];
+    for (let i = 0; i < p.length; i++) {
+        let p_i = p[i];
+        let q_i = q[i];
+        squares[squares.length] = (Math.sqrt(p_i) - Math.sqrt(q_i)) ** 2;
+    }
+    return (Math.sqrt(sum(squares))/Math.sqrt(2));
+}
+
 function default_scorer (x, y) {
     return (x === y) ? 1 : -1;
 }
@@ -123,4 +147,4 @@ function needleman_wunsch_align(x, y, scorer = default_scorer) {
     return alignment
 }
 
-module.exports = {cosinesim, needleman_wunsch_align, jensen_shannon, x_entropy, _kld}
+module.exports = {cosinesim, needleman_wunsch_align, jensen_shannon, x_entropy, _kld, hellinger}

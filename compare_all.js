@@ -1,5 +1,5 @@
 var fs = require('fs')
-var {cosinesim, needleman_wunsch_align, jensen_shannon, x_entropy} = require('./node_compare')
+var {cosinesim, needleman_wunsch_align, jensen_shannon, x_entropy, hellinger} = require('./node_compare')
 
 function get_logit_chars(logits, alphabet) {
     let logit_chars = [];
@@ -256,21 +256,25 @@ async function run_compare() {
             // }
 
             let best_xen_print = []
+            let best_hell_print = []
             // naively insert Cross Entropy
             for (let i = 0; i < best_golds.length; i++) {
                 // let new_cell = js_row.insertCell();
                 let cos = cosinesim(best_golds[i], best_tests[i]);
                 let jsd = jensen_shannon(best_golds[i], best_tests[i]);
                 let xen = x_entropy(best_golds[i], best_tests[i]);
+                let hell = hellinger(best_golds[i], best_tests[i]);
                 best_cos_print[i] = cos.toFixed(3);
                 best_jsd_print[i] = (1 - jsd).toFixed(3);
                 best_xen_print[i] = (1 - xen).toFixed(3);
+                best_hell_print[i] = hell.toFixed(3);
                 // new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max((.6 - (1 - jsd)), 0) + ")"
             }
 
             // print results to file
             let print_text = best_golds_print.join(',') + '\n' + best_tests_print.join(',') + '\n' +
-                best_cos_print.join(',') + '\n' + best_jsd_print.join(',') + '\n' + best_xen_print.join(',');
+                best_cos_print.join(',') + '\n' + best_jsd_print.join(',') + '\n' + best_xen_print.join(',') + '\n' +
+                best_hell_print.join(',');
             let new_file = tsv[row_i][1] + '.' + tsv[row_j][1];
             console.log("writing to " + new_file);
             fs.writeFileSync('../STT/data/en/results/' + new_file + '.txt', print_text);

@@ -31,6 +31,8 @@
         </tr>
         <tr id="js_row">
         </tr>
+        <tr id="xen_row">
+        </tr>
     </table>
     <br>
     <span>gold file name</span>
@@ -74,14 +76,16 @@
         let test_row = document.getElementById("test_scores");
         let cosine_row = document.getElementById("cosine");
         let js_row = document.getElementById("js_row");
+        let xen_row = document.getElementById("xen_row");
 
         // reset table
         colgroup.innerHTML = "<col>";
         text_row.innerHTML = "<td>Sentence: </td>";
         gold_row.innerHTML = "<td>Gold Scores: </td>";
         test_row.innerHTML = "<td>Test Scores: </td>";
-        cosine_row.innerHTML = "<td>Cosine Scores:</td>";
+        cosine_row.innerHTML = "<td>Hellinger Scores:</td>";
         js_row.innerHTML = "<td>JSD Scores:</td>";
+        xen_row.innerHTML = "<td>Cross Entropy Scores:</td>";
 
         // load data from json files
         const test = await fetch(filename)
@@ -205,10 +209,10 @@
             new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max(.6 - best_tests[i][alphabet_index.get(gold_phrase[i])], 0) + ")"
         }
 
-        // naively insert cosine sim
+        // naively insert hellinger
         for (let i = 0; i < best_golds.length; i++) {
             let new_cell = cosine_row.insertCell();
-            let cos = cosinesim(best_golds[i], best_tests[i]);
+            let cos = hellinger(best_golds[i], best_tests[i]);
             let best_fixed = [];
             let test_fixed = [];
             for (let j = 0; j < best_golds[i].length; j++) {
@@ -221,15 +225,23 @@
             // console.log(best_tests[i]);
             // console.log('cos at ' + i + ': ' + cos);
             new_cell.innerText = cos.toFixed(3);
-            new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max((.6 - cos), 0) + ")"
+            new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max((cos - .3), 0) + ")"
         }
 
         // naively insert Jensen-Shannon
         for (let i = 0; i < best_golds.length; i++) {
             let new_cell = js_row.insertCell();
             let jsd = jensen_shannon(best_golds[i], best_tests[i]);
-            new_cell.innerText = (1 - jsd).toFixed(3);
-            new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max((.6 - (1 - jsd)), 0) + ")"
+            new_cell.innerText = (jsd).toFixed(3);
+            new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.max((jsd - .3), 0) + ")"
+        }
+
+        // naively insert Cross Entropy
+        for (let i = 0; i < best_golds.length; i++) {
+            let new_cell = xen_row.insertCell();
+            let xen = x_entropy(best_golds[i], best_tests[i]);
+            new_cell.innerText = (xen).toFixed(3);
+            new_cell.style.backgroundColor = "rgba(255, 0, 0, " + Math.min((xen - .3), 1) + ")"
         }
 
 //         for (let i = 0; i < best_golds.length; i++) {

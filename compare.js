@@ -7,6 +7,14 @@ function sum(x) {
     return x.reduce((partialSum, a) => partialSum + a, 0);
 }
 
+function _kld (x, y) {
+    let result = []
+    for (let i = 0; i < x.length; i++) {
+        result[i] = x[i] * (Math.log2(x[i]/y[i]))
+    }
+    return sum(result)
+}
+
 function cosinesim(x, y){
     var dotproduct=0;
     var mx=0;
@@ -30,7 +38,7 @@ function jensen_shannon (x, y) {
     for(let i = 0; i < x.length; i++){
         m[i] = (x[i] + y[i]) / 2;
     }
-    return (math.kldivergence(x, m) + math.kldivergence(y, m)) / 2;
+    return (_kld(x, m) + _kld(y, m)) / 2;
 }
 
 function x_entropy (x, y) {
@@ -39,6 +47,16 @@ function x_entropy (x, y) {
         s[i] = x[i] * Math.log2(y[i])
     }
     return -1 * sum(s)
+}
+
+function hellinger (p, q) {
+    let squares = [];
+    for (let i = 0; i < p.length; i++) {
+        let p_i = p[i];
+        let q_i = q[i];
+        squares[squares.length] = (Math.sqrt(p_i) - Math.sqrt(q_i)) ** 2;
+    }
+    return (Math.sqrt(sum(squares))/Math.sqrt(2));
 }
 
 function default_scorer (x, y) {
