@@ -401,8 +401,8 @@ ax4d.set_title('Both Right Answer 1')
 
 fig8, ax8 = plt.subplots()
 fig8.suptitle('Baseline vs Jensen-Shannon')
-ax8.scatter([x[0] for x in jsd_all], [x[1] for x in jsd_all], s = 1, c = '#990000')
-ax8.axline((0, 0), slope = 1, c = 'black')
+ax8.scatter([x[0] for x in jsd_all], [1-x[1] for x in jsd_all], s = 1, c = '#990000')
+ax8.axline((0, 1), slope = -1, c = 'black')
 ax8.set_xlabel('Baseline Score')
 ax8.set_ylabel('Jensen-Shannon Score')
 
